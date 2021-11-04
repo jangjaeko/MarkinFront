@@ -1,12 +1,14 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import Icons from '../Icons/Icons';
 
 export default function MainHeader(props) {
   return (
     <>
       <View style={{marginTop: 10}}>
-        <TouchableOpacity onPress={() => props.navigation.navigate('Login')}>
+        <TouchableOpacity
+          onPress={() => props.navigateToHome()}
+          style={{width: 20, height: 20}}>
           <Icons.Feather
             name="search"
             size={20}
@@ -14,7 +16,7 @@ export default function MainHeader(props) {
             style={{position: 'absolute', left: 30, top: 0}}
           />
         </TouchableOpacity>
-        <Text style={{textAlign: 'center'}}>MARKIN</Text>
+        <Text style={styles.Logo}>MARKIN</Text>
         <Icons.Feather
           name="bell"
           size={20}
@@ -36,3 +38,13 @@ export default function MainHeader(props) {
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  Logo: {
+    textAlign: 'center',
+    position: 'absolute',
+    top: 0,
+    left: '50%',
+    transform: [{translateX: -27}, {translateY: 0}],
+  },
+});

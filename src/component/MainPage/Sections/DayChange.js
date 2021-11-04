@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-export default function DayChange() {
+export default function DayChange(props) {
   const [FollowChange, setFollowChange] = useState(1);
   const [PostingChange, setPostingChange] = useState(0);
   const handleFollow = () => {
