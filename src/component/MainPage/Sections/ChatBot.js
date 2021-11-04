@@ -5,7 +5,9 @@ export default function ChatBot() {
   return (
     <View style={styles.outView}>
       <View style={{flexDirection: 'row', marginLeft: 20, marginTop: 18}}>
-        <Text style={{color: '#FD780F', fontSize: 20}}>챗봇</Text>
+        <Text style={{color: '#FD780F', fontSize: 20, fontWeight: 'bold'}}>
+          챗봇
+        </Text>
         <Text style={{fontSize: 20}}>에게 </Text>
       </View>
       <View style={{marginLeft: 20, marginTop: 5}}>

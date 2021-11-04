@@ -1,9 +1,17 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  ScrollView,
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import Icons from '../Icons/Icons';
 import DayChange from './Sections/DayChange';
 import ChatBot from './Sections/ChatBot';
-import MainHeader from './MainHeader';
+import MainHeader from './Sections/MainHeader';
+import DaySchedule from './Sections/DaySchedule';
+
 export default function Main(props) {
   const navigateToHome = () => {
     props.navigation.navigate('Home');
@@ -14,13 +22,18 @@ export default function Main(props) {
       <View style={styles.HeaderStyle}>
         <MainHeader navigateToHome={navigateToHome} />
       </View>
-      {/* DayChange */}
-      <View style={{width: '100%', marginTop: 20}}>
-        <DayChange />
-      </View>
-      <View style={{width: '100%', marginTop: 20}}>
-        <ChatBot />
-      </View>
+      <ScrollView>
+        {/* DayChange */}
+        <View style={{width: '100%', marginTop: 20}}>
+          <DayChange />
+        </View>
+        <View style={{width: '100%', marginTop: 20}}>
+          <ChatBot />
+        </View>
+        <View style={{width: '100%', marginTop: 20}}>
+          <DaySchedule />
+        </View>
+      </ScrollView>
     </View>
   );
 }
