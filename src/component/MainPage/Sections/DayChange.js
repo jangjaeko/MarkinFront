@@ -24,7 +24,7 @@ export default function DayChange() {
           }}>
           일별 계정 변화
         </Text>
-        <TouchableOpacity style={{marginLeft: 80}} onPress={handleFollow}>
+        <TouchableOpacity style={{marginLeft: 120}} onPress={handleFollow}>
           {FollowChange === 1 ? (
             <View style={styles.Focus}>
               <Text style={styles.FocusText}>팔로워</Text>
@@ -132,13 +132,13 @@ export default function DayChange() {
 
 const styles = StyleSheet.create({
   FollowView: {
-    shadowColor: '#4d4d4d',
+    shadowColor: '#00000014',
     shadowOffset: {width: 0, height: 0},
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    width: '80%',
+    shadowOpacity: 0.4,
+    shadowRadius: 2,
+    width: '90%',
     height: 150,
-    marginLeft: '10%',
+    marginLeft: '5%',
     borderRadius: 10,
     borderColor: '#111111',
     borderStyle: 'solid',
@@ -146,13 +146,13 @@ const styles = StyleSheet.create({
     elevation: 6,
   },
   PostView: {
-    shadowColor: '#4d4d4d',
+    shadowColor: '#00000014',
     shadowOffset: {width: 0, height: 0},
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    width: '80%',
+    shadowOpacity: 0.4,
+    shadowRadius: 2,
+    width: '90%',
     height: 200,
-    marginLeft: '10%',
+    marginLeft: '5%',
     borderRadius: 10,
     borderColor: '#111111',
     borderStyle: 'solid',
@@ -165,14 +165,14 @@ const styles = StyleSheet.create({
     borderColor: '#E5E5E5',
     borderStyle: 'solid',
     width: 50,
-    borderWidth: 3,
+    borderWidth: 2,
     height: 30,
     justifyContent: 'center',
   },
   unFocusText: {
     textAlign: 'center',
     color: '#000000B2',
-    fontWeight: 'bold',
+    fontWeight: '200',
   },
   Focus: {
     backgroundColor: '#747474',
