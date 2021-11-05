@@ -12,23 +12,33 @@ export default function MainFooter() {
       <View style={{flexDirection: 'row'}}>
         <View style={{width: '20%', alignItems: 'center'}}>
           <Image source={home} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center'}}>Home</Text>
+          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
+            Home
+          </Text>
         </View>
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={managers} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center'}}>Manager</Text>
+          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
+            Manager
+          </Text>
         </View>
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={campaign} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center'}}>Campaign</Text>
+          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
+            Campaign
+          </Text>
         </View>
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={calendaricon} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center'}}>Calendar</Text>
+          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
+            Calendar
+          </Text>
         </View>
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={myfeed} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center'}}>Myfeed</Text>
+          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
+            Myfeed
+          </Text>
         </View>
       </View>
     </View>

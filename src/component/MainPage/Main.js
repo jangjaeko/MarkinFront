@@ -12,6 +12,7 @@ import ChatBot from './Sections/ChatBot';
 import MainHeader from './Sections/MainHeader';
 import DaySchedule from './Sections/DaySchedule';
 import MainFooter from './Sections/MainFooter';
+import Issue from './Sections/Issue';
 export default function Main(props) {
   const navigateToHome = () => {
     props.navigation.navigate('Home');
@@ -22,7 +23,7 @@ export default function Main(props) {
       <View style={styles.HeaderStyle}>
         <MainHeader navigateToHome={navigateToHome} />
       </View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         {/* DayChange */}
         <View style={{width: '100%', marginTop: 20}}>
           <DayChange />
@@ -32,6 +33,10 @@ export default function Main(props) {
         </View>
         <View style={{width: '100%', marginTop: 20}}>
           <DaySchedule />
+        </View>
+        <View style={{marginLeft: '5%', marginTop: 20, marginBottom: 20}}>
+          <Text>I S S U E</Text>
+          <Issue />
         </View>
       </ScrollView>
       <View style={styles.FooterStyle}>
