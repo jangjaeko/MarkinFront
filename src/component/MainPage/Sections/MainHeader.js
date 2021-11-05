@@ -5,7 +5,7 @@ import Icons from '../../Icons/Icons';
 export default function MainHeader(props) {
   return (
     <>
-      <View style={{marginTop: 10}}>
+      <View style={{marginTop: -20}}>
         <TouchableOpacity
           onPress={() => props.navigateToHome()}
           style={{width: 20, height: 20}}>
@@ -32,8 +32,12 @@ export default function MainHeader(props) {
       </View>
       <View>
         <Text style={{position: 'absolute', left: 75, top: 35}}>Home</Text>
-        <Text style={{position: 'absolute', left: 178, top: 35}}>Feed</Text>
-        <Text style={{position: 'absolute', right: 59, top: 35}}>Ranking</Text>
+        <Text style={{position: 'absolute', left: 178, top: 35, opacity: 0.5}}>
+          Feed
+        </Text>
+        <Text style={{position: 'absolute', right: 59, top: 35, opacity: 0.5}}>
+          Ranking
+        </Text>
       </View>
     </>
   );

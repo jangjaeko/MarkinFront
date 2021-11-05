@@ -11,7 +11,7 @@ import DayChange from './Sections/DayChange';
 import ChatBot from './Sections/ChatBot';
 import MainHeader from './Sections/MainHeader';
 import DaySchedule from './Sections/DaySchedule';
-
+import MainFooter from './Sections/MainFooter';
 export default function Main(props) {
   const navigateToHome = () => {
     props.navigation.navigate('Home');
@@ -34,13 +34,16 @@ export default function Main(props) {
           <DaySchedule />
         </View>
       </ScrollView>
+      <View style={styles.FooterStyle}>
+        <MainFooter />
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   HeaderStyle: {
-    height: 180,
+    height: 140,
     width: '100%',
     backgroundColor: 'white',
     justifyContent: 'center',
@@ -53,5 +56,13 @@ const styles = StyleSheet.create({
     top: 0,
     left: '50%',
     transform: [{translateX: -27}, {translateY: 0}],
+  },
+  FooterStyle: {
+    height: 100,
+    width: '100%',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgb(212, 212, 212)',
   },
 });
