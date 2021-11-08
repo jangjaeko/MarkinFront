@@ -30,7 +30,7 @@ export default function Pictures() {
             aspectRatio: 1,
           }}></View>
       </View>
-      <View style={{flexDirection: 'row', flex: 1}}>
+      <View style={{flexDirection: 'row'}}>
         <View
           style={{
             flex: 1,
@@ -54,7 +54,7 @@ export default function Pictures() {
             borderColor: '#EBEBEC',
           }}></View>
       </View>
-      <View style={{flexDirection: 'row', flex: 1}}>
+      <View style={{flexDirection: 'row'}}>
         <View
           style={{
             flex: 1,
@@ -80,7 +80,7 @@ export default function Pictures() {
             aspectRatio: 1,
           }}></View>
       </View>
-      <View style={{flexDirection: 'row', flex: 1, marginBottom: 100}}>
+      <View style={{flexDirection: 'row', marginBottom: 100}}>
         <View
           style={{
             flex: 1,
