@@ -18,7 +18,7 @@ export default function YourFeed(props) {
         <Profile />
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={{width: '100%', flex: 1}}>
+        <View style={{width: '100%'}}>
           <Pictures />
         </View>
       </ScrollView>

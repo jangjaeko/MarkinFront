@@ -27,14 +27,35 @@ export default function Profile() {
           <Text style={{marginTop: 10, fontSize: 15}}>
             뷰티·패션 인플루언서입니다.
           </Text>
-          <Text style={{fontWeight: 'bold', marginTop: 20}}>
-            팔로워 56.8만 프렌즈 36
-          </Text>
+          <View style={{flexDirection: 'row'}}>
+            <Text style={{marginTop: 20, fontSize: 16}}>팔로워</Text>
+            <Text
+              style={{
+                fontWeight: 'bold',
+                marginTop: 19,
+                marginLeft: 13,
+                fontSize: 16,
+              }}>
+              56.8만
+            </Text>
+            <Text style={{marginTop: 20, marginLeft: 20, fontSize: 16}}>
+              프렌즈
+            </Text>
+            <Text
+              style={{
+                fontWeight: 'bold',
+                marginTop: 19,
+                marginLeft: 13,
+                fontSize: 16,
+              }}>
+              36
+            </Text>
+          </View>
         </View>
       </View>
       <View style={{flexDirection: 'row', marginTop: 30}}>
         <TouchableOpacity style={styles.KnockBut}>
-          <Image source={Knock} style={{width: 30, height: 30, opacity: 0.5}} />
+          <Image source={Knock} style={{width: 25, height: 25, opacity: 0.5}} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.Freinding}>
           <Text
@@ -54,8 +75,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderWidth: 2,
     borderColor: '#EBEBEC',
-    width: 50,
-    height: 50,
+    width: 45,
+    height: 45,
     marginTop: -10,
     borderRadius: 10,
     alignItems: 'center',
@@ -65,7 +86,7 @@ const styles = StyleSheet.create({
   Freinding: {
     backgroundColor: '#FD780F',
     width: 130,
-    height: 50,
+    height: 45,
     borderRadius: 20,
     alignContent: 'center',
     justifyContent: 'center',
@@ -77,7 +98,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#EBEBEC',
     width: 130,
-    height: 50,
+    height: 45,
     marginTop: -10,
     borderRadius: 20,
     alignItems: 'center',
