@@ -17,6 +17,9 @@ export default function Main(props) {
   const navigateToHome = () => {
     props.navigation.navigate('Home');
   };
+  const navigateToMyFeed = () => {
+    props.navigation.navigate('YourFeed');
+  };
   return (
     <View style={{backgroundColor: 'white', height: '100%'}}>
       {/* Header */}
@@ -40,7 +43,7 @@ export default function Main(props) {
         </View>
       </ScrollView>
       <View style={styles.FooterStyle}>
-        <MainFooter />
+        <MainFooter navigateToMyFeed={navigateToMyFeed} />
       </View>
     </View>
   );

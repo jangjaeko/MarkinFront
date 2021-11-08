@@ -28,6 +28,12 @@ const Home = props => {
         }}>
         <Text>Main</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          props.navigation.navigate('YourFeed');
+        }}>
+        <Text>YourFeed</Text>
+      </TouchableOpacity>
       <Icon name="instagram" size={30} color="#111" />
     </View>
   );

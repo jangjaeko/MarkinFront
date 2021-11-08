@@ -6,16 +6,20 @@ import home from '../../../icons/home.png';
 import managers from '../../../icons/managers.png';
 import myfeed from '../../../icons/myfeed.png';
 
-export default function MainFooter(props) {
+export default function YourFeedFooter(props) {
   return (
     <View style={{height: 80}}>
       <View style={{flexDirection: 'row'}}>
-        <View style={{width: '20%', alignItems: 'center'}}>
-          <Image source={home} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
-            Home
-          </Text>
-        </View>
+        <TouchableOpacity
+          onPress={() => props.navigateToMain()}
+          style={{width: '20%'}}>
+          <View style={{alignItems: 'center'}}>
+            <Image source={home} style={{width: 20, height: 20}} />
+            <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
+              Home
+            </Text>
+          </View>
+        </TouchableOpacity>
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={managers} style={{width: 20, height: 20}} />
           <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
@@ -34,14 +38,12 @@ export default function MainFooter(props) {
             Calendar
           </Text>
         </View>
-        <TouchableOpacity
-          onPress={() => props.navigateToMyFeed()}
-          style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
+        <View style={{alignItems: 'center', width: '20%', opacity: 0.5}}>
           <Image source={myfeed} style={{width: 20, height: 20}} />
           <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
             Myfeed
           </Text>
-        </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
