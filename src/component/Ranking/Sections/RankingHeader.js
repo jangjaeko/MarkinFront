@@ -6,6 +6,14 @@ export default function Ranking(props) {
   return (
     <>
       <View style={{marginTop: -20}}>
+        <TouchableOpacity style={{width: 20, height: 20}}>
+          <Icons.Feather
+            name="search"
+            size={20}
+            color="#111"
+            style={{position: 'absolute', left: 30, top: 0}}
+          />
+        </TouchableOpacity>
         <Text style={styles.Logo}>MARKIN</Text>
         <Icons.Feather
           name="bell"

@@ -2,6 +2,8 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import RankingHeader from './Sections/RankingHeader';
 import Footer from '../MainPage/Sections/MainFooter';
+import Search from './Sections/Search/Search';
+import RankList from './Sections/RankList/RankList';
 export default function Ranking(props) {
   const navigateToMain = () => {
     props.navigation.navigate('Main');
@@ -11,7 +13,12 @@ export default function Ranking(props) {
       <View style={styles.HeaderStyle}>
         <RankingHeader navigateToMain={navigateToMain} />
       </View>
-      <Text>Rank</Text>
+      {/* <View style={{width: '90%', marginLeft: '5%'}}>
+        <Search />
+      </View> */}
+      <View style={{width: '100%'}}>
+        <RankList />
+      </View>
       <View style={styles.FooterStyle}>
         <Footer />
       </View>

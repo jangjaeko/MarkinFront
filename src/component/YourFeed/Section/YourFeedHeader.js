@@ -12,7 +12,7 @@ export default function YourFeedHeader(props) {
           name="chevron-left"
           size={50}
           color="#111"
-          style={{position: 'absolute', left: 20, top: 10}}
+          style={{position: 'absolute', left: 8, top: 10}}
         />
       </TouchableOpacity>
       <Text style={{textAlign: 'center', marginTop: 20}}>seeun_lynn</Text>

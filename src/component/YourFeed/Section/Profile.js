@@ -3,6 +3,12 @@ import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import ProfileImage from '../../../images/Profile.png';
 import instaLogo from '../../../icons/instaLogo.png';
 import Knock from '../../../icons/knock.png';
+import fist1 from '../../../icons/fist1.png';
+import fist2 from '../../../icons/fist2.png';
+import fist3 from '../../../icons/fist3.png';
+import fist4 from '../../../icons/fist4.png';
+import fist5 from '../../../icons/fist5.png';
+
 export default function Profile() {
   return (
     <View style={{marginBottom: 50}}>
@@ -28,7 +34,9 @@ export default function Profile() {
             뷰티·패션 인플루언서입니다.
           </Text>
           <View style={{flexDirection: 'row'}}>
-            <Text style={{marginTop: 20, fontSize: 16}}>팔로워</Text>
+            <Text style={{marginTop: 20, fontSize: 16, opacity: 0.7}}>
+              팔로워
+            </Text>
             <Text
               style={{
                 fontWeight: 'bold',
@@ -38,7 +46,13 @@ export default function Profile() {
               }}>
               56.8만
             </Text>
-            <Text style={{marginTop: 20, marginLeft: 20, fontSize: 16}}>
+            <Text
+              style={{
+                marginTop: 20,
+                marginLeft: 20,
+                fontSize: 16,
+                opacity: 0.7,
+              }}>
               프렌즈
             </Text>
             <Text
@@ -55,7 +69,7 @@ export default function Profile() {
       </View>
       <View style={{flexDirection: 'row', marginTop: 30}}>
         <TouchableOpacity style={styles.KnockBut}>
-          <Image source={Knock} style={{width: 25, height: 25, opacity: 0.5}} />
+          <Image source={fist5} style={{width: 25, height: 25}} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.Freinding}>
           <Text
@@ -64,7 +78,7 @@ export default function Profile() {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.Message}>
-          <Text style={{textAlign: 'center', opacity: 0.5}}>메세지</Text>
+          <Text style={{textAlign: 'center'}}>메세지</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -73,34 +87,35 @@ export default function Profile() {
 const styles = StyleSheet.create({
   KnockBut: {
     backgroundColor: 'white',
-    borderWidth: 2,
-    borderColor: '#EBEBEC',
+    borderWidth: 1,
+    borderColor: 'black',
     width: 45,
     height: 45,
     marginTop: -10,
-    borderRadius: 10,
+    borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
     marginLeft: 0,
+    opacity: 0.2,
   },
   Freinding: {
     backgroundColor: '#FD780F',
-    width: 130,
+    width: 140,
     height: 45,
-    borderRadius: 20,
+    borderRadius: 12,
     alignContent: 'center',
     justifyContent: 'center',
     marginTop: -10,
-    marginLeft: 20,
+    marginLeft: 15,
   },
   Message: {
     backgroundColor: 'white',
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: '#EBEBEC',
-    width: 130,
+    width: 140,
     height: 45,
     marginTop: -10,
-    borderRadius: 20,
+    borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
     marginLeft: 10,
