@@ -20,11 +20,20 @@ export default function Main(props) {
   const navigateToMyFeed = () => {
     props.navigation.navigate('YourFeed');
   };
+  const navigateToRanking = () => {
+    props.navigation.navigate('Ranking');
+  };
+  const navigateToMain = () => {
+    props.navigation.navigate('Main');
+  };
   return (
     <View style={{backgroundColor: 'white', height: '100%'}}>
       {/* Header */}
       <View style={styles.HeaderStyle}>
-        <MainHeader navigateToHome={navigateToHome} />
+        <MainHeader
+          navigateToHome={navigateToHome}
+          navigateToRanking={navigateToRanking}
+        />
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* DayChange */}
@@ -37,13 +46,16 @@ export default function Main(props) {
         <View style={{width: '100%', marginTop: 20}}>
           <DaySchedule />
         </View>
-        <View style={{marginLeft: '5%', marginTop: 20, marginBottom: 20}}>
+        <View style={{marginLeft: '5%', marginTop: 20, marginBottom: 150}}>
           <Text>I S S U E</Text>
           <Issue />
         </View>
       </ScrollView>
       <View style={styles.FooterStyle}>
-        <MainFooter navigateToMyFeed={navigateToMyFeed} />
+        <MainFooter
+          navigateToMyFeed={navigateToMyFeed}
+          navigateToMain={navigateToMain}
+        />
       </View>
     </View>
   );
@@ -70,7 +82,9 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'white',
     justifyContent: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: 'rgb(212, 212, 212)',
+    borderTopWidth: 1,
+    borderTopColor: 'rgb(212, 212, 212)',
+    position: 'absolute',
+    bottom: 0,
   },
 });

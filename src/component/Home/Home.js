@@ -34,6 +34,9 @@ const Home = props => {
         }}>
         <Text>YourFeed</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => props.navigation.navigate('Ranking')}>
+        <Text>Ranking</Text>
+      </TouchableOpacity>
       <Icon name="instagram" size={30} color="#111" />
     </View>
   );

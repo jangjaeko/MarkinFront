@@ -16,6 +16,7 @@ import Login from './src/component/Login/Login';
 import ImagePickerex from './src/component/ImagePicker/ImagePickerex';
 import Main from './src/component/MainPage/Main';
 import YourFeed from './src/component/YourFeed/YourFeed';
+import Ranking from './src/component/Ranking/Ranking';
 const Stack = createStackNavigator();
 function App() {
   return (
@@ -44,6 +45,11 @@ function App() {
         <Stack.Screen
           name="YourFeed"
           component={YourFeed}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Ranking"
+          component={Ranking}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

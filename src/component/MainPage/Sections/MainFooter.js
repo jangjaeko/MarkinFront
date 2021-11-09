@@ -16,6 +16,7 @@ export default function MainFooter(props) {
             Home
           </Text>
         </View>
+
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={managers} style={{width: 20, height: 20}} />
           <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
@@ -28,6 +29,7 @@ export default function MainFooter(props) {
             Campaign
           </Text>
         </View>
+
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={calendaricon} style={{width: 20, height: 20}} />
           <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
