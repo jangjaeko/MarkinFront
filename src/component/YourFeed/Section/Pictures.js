@@ -3,7 +3,7 @@ import {View, Text, Image} from 'react-native';
 
 export default function Pictures() {
   return (
-    <>
+    <View style={{marginBottom: 100}}>
       <View style={{flexDirection: 'row'}}>
         <View
           style={{
@@ -80,7 +80,7 @@ export default function Pictures() {
             aspectRatio: 1,
           }}></View>
       </View>
-      <View style={{flexDirection: 'row', marginBottom: 100}}>
+      <View style={{flexDirection: 'row'}}>
         <View
           style={{
             flex: 1,
@@ -107,6 +107,6 @@ export default function Pictures() {
             aspectRatio: 1,
           }}></View>
       </View>
-    </>
+    </View>
   );
 }
