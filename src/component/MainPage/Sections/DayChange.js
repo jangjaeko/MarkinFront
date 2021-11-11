@@ -51,9 +51,7 @@ export default function DayChange(props) {
         <>
           <View style={{flexDirection: 'row', marginTop: 10}}>
             <View style={{width: '50%'}}>
-              <Text style={{marginLeft: 20, fontWeight: '200'}}>
-                팔로워 증가
-              </Text>
+              <Text style={styles.LightText}>팔로워 증가</Text>
             </View>
             <View style={{width: '50%'}}>
               <Text style={{textAlign: 'right', marginRight: '5%'}}>
@@ -63,9 +61,7 @@ export default function DayChange(props) {
           </View>
           <View style={{flexDirection: 'row', marginTop: 10}}>
             <View style={{width: '50%'}}>
-              <Text style={{marginLeft: 20, fontWeight: '200'}}>
-                기존 팔로워 감소
-              </Text>
+              <Text style={styles.LightText}>기존 팔로워 감소</Text>
             </View>
             <View style={{width: '50%'}}>
               <Text style={{textAlign: 'right', marginRight: '5%'}}>
@@ -75,7 +71,7 @@ export default function DayChange(props) {
           </View>
           <View style={{flexDirection: 'row', marginTop: 10}}>
             <View style={{width: '50%'}}>
-              <Text style={{marginLeft: 20, fontWeight: '200'}}>총 팔로워</Text>
+              <Text style={styles.LightText}>총 팔로워</Text>
             </View>
             <View style={{width: '50%'}}>
               <Text style={{textAlign: 'right', marginRight: '5%'}}>
@@ -88,7 +84,7 @@ export default function DayChange(props) {
         <>
           <View style={{flexDirection: 'row', marginTop: 10}}>
             <View style={{width: '50%'}}>
-              <Text style={{marginLeft: 20, fontWeight: '200'}}>도달 수</Text>
+              <Text style={styles.LightText}>도달 수</Text>
             </View>
             <View style={{width: '50%'}}>
               <Text style={{textAlign: 'right', marginRight: '5%'}}>
@@ -98,7 +94,7 @@ export default function DayChange(props) {
           </View>
           <View style={{flexDirection: 'row', marginTop: 10}}>
             <View style={{width: '50%'}}>
-              <Text style={{marginLeft: 20, fontWeight: '200'}}>노출 수</Text>
+              <Text style={styles.LightText}>노출 수</Text>
             </View>
             <View style={{width: '50%'}}>
               <Text style={{textAlign: 'right', marginRight: '5%'}}>
@@ -108,7 +104,7 @@ export default function DayChange(props) {
           </View>
           <View style={{flexDirection: 'row', marginTop: 10}}>
             <View style={{width: '50%'}}>
-              <Text style={{marginLeft: 20, fontWeight: '200'}}>댓글</Text>
+              <Text style={styles.LightText}>댓글</Text>
             </View>
             <View style={{width: '50%'}}>
               <Text style={{textAlign: 'right', marginRight: '5%'}}>30 명</Text>
@@ -116,7 +112,7 @@ export default function DayChange(props) {
           </View>
           <View style={{flexDirection: 'row', marginTop: 10}}>
             <View style={{width: '50%'}}>
-              <Text style={{marginLeft: 20, fontWeight: '200'}}>좋아요</Text>
+              <Text style={styles.LightText}>좋아요</Text>
             </View>
             <View style={{width: '50%'}}>
               <Text style={{textAlign: 'right', marginRight: '5%'}}>
@@ -172,7 +168,7 @@ const styles = StyleSheet.create({
   unFocusText: {
     textAlign: 'center',
     color: '#000000B2',
-    fontWeight: '200',
+    fontFamily: 'NotoSansKR-Light',
   },
   Focus: {
     backgroundColor: '#747474',
@@ -185,5 +181,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontWeight: 'bold',
+  },
+  LightText: {
+    marginLeft: 20,
+    fontWeight: '200',
+    fontFamily: 'NotoSansKR-Light',
+  },
+  NumText: {
+    textAlign: 'right',
+    marginRight: '5%',
+    fontFamily: 'NotoSansKR-Bold',
   },
 });

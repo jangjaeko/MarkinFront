@@ -47,7 +47,7 @@ export default function Main(props) {
           <DaySchedule />
         </View>
         <View style={{marginLeft: '5%', marginTop: 20, marginBottom: 150}}>
-          <Text>I S S U E</Text>
+          <Text style={{fontFamily: 'NotoSansKR-Bold'}}>I S S U E</Text>
           <Issue />
         </View>
       </ScrollView>

@@ -12,39 +12,44 @@ export default function MainFooter(props) {
       <View style={{flexDirection: 'row'}}>
         <View style={{width: '20%', alignItems: 'center'}}>
           <Image source={home} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
-            Home
-          </Text>
+          <Text style={styles.focusText}>Home</Text>
         </View>
 
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={managers} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
-            Manager
-          </Text>
+          <Text style={styles.underText}>Manager</Text>
         </View>
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={campaign} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
-            Campaign
-          </Text>
+          <Text style={styles.underText}>Campaign</Text>
         </View>
 
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={calendaricon} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
-            Calendar
-          </Text>
+          <Text style={styles.underText}>Calendar</Text>
         </View>
         <TouchableOpacity
           onPress={() => props.navigateToMyFeed()}
           style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={myfeed} style={{width: 20, height: 20}} />
-          <Text style={{textAlign: 'center', fontSize: 12, marginTop: 5}}>
-            Myfeed
-          </Text>
+          <Text style={styles.underText}>Myfeed</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  underText: {
+    textAlign: 'center',
+    fontSize: 12,
+    marginTop: 5,
+    fontFamily: 'Roboto-Light',
+  },
+  focusText: {
+    textAlign: 'center',
+    fontSize: 12,
+    marginTop: 5,
+    fontFamily: 'Roboto-Medium',
+  },
+});

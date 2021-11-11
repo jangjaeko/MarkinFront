@@ -12,10 +12,15 @@ export default function DaySchedule() {
   return (
     <View style={styles.outView}>
       <View style={{marginTop: 20, marginLeft: 20, marginBottom: 30}}>
-        <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+        <Text
+          style={{
+            fontSize: 18,
+            fontWeight: 'bold',
+            fontFamily: 'NotoSansKR-Medium',
+          }}>
           {year}년 {month}월 {day}일{' '}
         </Text>
-        <Text style={{fontSize: 18}}>
+        <Text style={{fontSize: 18, fontFamily: 'NotoSansKR-Medium'}}>
           <B>김세은</B>님의 일정입니다
         </Text>
       </View>

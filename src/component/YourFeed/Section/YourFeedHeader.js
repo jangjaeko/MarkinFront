@@ -15,7 +15,14 @@ export default function YourFeedHeader(props) {
           style={{position: 'absolute', left: 8, top: 10}}
         />
       </TouchableOpacity>
-      <Text style={{textAlign: 'center', marginTop: 20}}>seeun_lynn</Text>
+      <Text
+        style={{
+          textAlign: 'center',
+          marginTop: 20,
+          fontFamily: 'NotoSansKR-Light',
+        }}>
+        seeun_lynn
+      </Text>
       <TouchableOpacity
         onPress={() => props.navigateToMain()}
         style={{

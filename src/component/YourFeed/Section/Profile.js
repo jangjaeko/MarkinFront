@@ -22,24 +22,34 @@ export default function Profile() {
             <Image source={instaLogo} style={{width: 20, height: 20}} />
             <Text
               style={{
-                fontWeight: 'bold',
                 marginLeft: 10,
                 fontSize: 20,
                 marginTop: -3,
+                fontFamily: 'NotoSansKR-Regular',
               }}>
               seeun_lynn
             </Text>
           </View>
-          <Text style={{marginTop: 10, fontSize: 15}}>
+          <Text
+            style={{
+              marginTop: 10,
+              fontSize: 15,
+              fontFamily: 'NotoSansKR-Light',
+            }}>
             뷰티·패션 인플루언서입니다.
           </Text>
           <View style={{flexDirection: 'row'}}>
-            <Text style={{marginTop: 20, fontSize: 16, opacity: 0.7}}>
+            <Text
+              style={{
+                marginTop: 20,
+                fontSize: 16,
+                fontFamily: 'NotoSansKR-Regular',
+              }}>
               팔로워
             </Text>
             <Text
               style={{
-                fontWeight: 'bold',
+                fontFamily: 'NotoSansKR-bold',
                 marginTop: 19,
                 marginLeft: 13,
                 fontSize: 16,
@@ -51,13 +61,14 @@ export default function Profile() {
                 marginTop: 20,
                 marginLeft: 20,
                 fontSize: 16,
-                opacity: 0.7,
+
+                fontFamily: 'NotoSansKR-Regular',
               }}>
               프렌즈
             </Text>
             <Text
               style={{
-                fontWeight: 'bold',
+                fontFamily: 'NotoSansKR-bold',
                 marginTop: 19,
                 marginLeft: 13,
                 fontSize: 16,
@@ -73,12 +84,18 @@ export default function Profile() {
         </TouchableOpacity>
         <TouchableOpacity style={styles.Freinding}>
           <Text
-            style={{textAlign: 'center', color: 'white', fontWeight: 'bold'}}>
+            style={{
+              textAlign: 'center',
+              color: 'white',
+              fontFamily: 'NotoSansKR-Medium',
+            }}>
             프렌징
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.Message}>
-          <Text style={{textAlign: 'center'}}>메세지</Text>
+          <Text style={{fontFamily: 'NotoSansKR-Regular', textAlign: 'center'}}>
+            메세지
+          </Text>
         </TouchableOpacity>
       </View>
     </View>

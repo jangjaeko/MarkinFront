@@ -5,13 +5,23 @@ export default function ChatBot() {
   return (
     <View style={styles.outView}>
       <View style={{flexDirection: 'row', marginLeft: 20, marginTop: 18}}>
-        <Text style={{color: '#FD780F', fontSize: 20, fontWeight: 'bold'}}>
+        <Text
+          style={{
+            color: '#FD780F',
+            fontSize: 20,
+            fontWeight: 'bold',
+            fontFamily: 'NotoSansKR-Medium',
+          }}>
           챗봇
         </Text>
-        <Text style={{fontSize: 20}}>에게 </Text>
+        <Text style={{fontSize: 20, fontFamily: 'NotoSansKR-Medium'}}>
+          에게{' '}
+        </Text>
       </View>
       <View style={{marginLeft: 20, marginTop: 5}}>
-        <Text style={{fontSize: 20}}>계정 관리 알람 받으세요 :)</Text>
+        <Text style={{fontSize: 20, fontFamily: 'NotoSansKR-Medium'}}>
+          계정 관리 알람 받으세요 :)
+        </Text>
       </View>
       <Image
         source={chatBotIcon}
