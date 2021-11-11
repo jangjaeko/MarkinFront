@@ -92,12 +92,22 @@ export default function RankList() {
     <View>
       <View style={{flexDirection: 'row', marginTop: 30}}>
         <TouchableOpacity style={styles.greyBtn}>
-          <Text style={{fontSize: 12, fontFamily: 'NotoSansKR-Regular'}}>
+          <Text
+            style={{
+              fontSize: 12,
+              fontFamily: 'NotoSansKR-Regular',
+              textAlign: 'center',
+            }}>
             카테고리
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.greyBtn2}>
-          <Text style={{fontSize: 12, fontFamily: 'NotoSansKR-Regular'}}>
+          <Text
+            style={{
+              fontSize: 12,
+              fontFamily: 'NotoSansKR-Regular',
+              textAlign: 'center',
+            }}>
             팔로워수
           </Text>
         </TouchableOpacity>
@@ -226,12 +236,12 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 0},
     shadowOpacity: 1,
     shadowRadius: 2,
-    height: 60,
+    height: 70,
     borderStyle: 'solid',
     backgroundColor: 'white',
     elevation: 6,
     justifyContent: 'center',
-    marginBottom: 20,
+    marginBottom: 3,
   },
   greyBtn: {
     backgroundColor: 'white',
