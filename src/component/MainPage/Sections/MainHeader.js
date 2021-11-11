@@ -3,6 +3,15 @@ import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import Icons from '../../Icons/Icons';
 
 export default function MainHeader(props) {
+  const handlefocusHome = () => {
+    props.setstateChange(1);
+  };
+  const handlefocusFeed = () => {
+    props.setstateChange(2);
+  };
+  const handlefocusRanking = () => {
+    props.setstateChange(3);
+  };
   return (
     <>
       <View style={{marginTop: -20}}>
@@ -30,16 +39,39 @@ export default function MainHeader(props) {
           style={{position: 'absolute', right: 26, top: 0}}
         />
       </View>
+
       <View>
-        <Text style={{position: 'absolute', left: 75, top: 35}}>Home</Text>
-        <Text style={{position: 'absolute', left: 178, top: 35, opacity: 0.5}}>
-          Feed
-        </Text>
-        <TouchableOpacity onPress={() => props.navigateToRanking()}>
-          <Text
-            style={{position: 'absolute', right: 59, top: 35, opacity: 0.5}}>
-            Ranking
-          </Text>
+        <TouchableOpacity onPress={handlefocusHome}>
+          {props.stateChange === 1 ? (
+            <Text style={{position: 'absolute', left: 75, top: 35}}>Home</Text>
+          ) : (
+            <Text
+              style={{position: 'absolute', left: 75, top: 35, opacity: 0.5}}>
+              Home
+            </Text>
+          )}
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handlefocusFeed}>
+          {props.stateChange === 2 ? (
+            <Text style={{position: 'absolute', left: 178, top: 35}}>Feed</Text>
+          ) : (
+            <Text
+              style={{position: 'absolute', left: 178, top: 35, opacity: 0.5}}>
+              Feed
+            </Text>
+          )}
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handlefocusRanking}>
+          {props.stateChange === 3 ? (
+            <Text style={{position: 'absolute', right: 59, top: 35}}>
+              Ranking
+            </Text>
+          ) : (
+            <Text
+              style={{position: 'absolute', right: 59, top: 35, opacity: 0.5}}>
+              Ranking
+            </Text>
+          )}
         </TouchableOpacity>
       </View>
     </>

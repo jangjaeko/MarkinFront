@@ -7,7 +7,7 @@ export default function YourFeedHeader(props) {
     <View>
       <TouchableOpacity
         onPress={() => props.navigateToMain()}
-        style={{width: 50, height: 50, position: 'absolute'}}>
+        style={{width: 150, height: 150, position: 'absolute'}}>
         <Icons.EvilIcons
           name="chevron-left"
           size={50}

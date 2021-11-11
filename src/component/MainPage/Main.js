@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   ScrollView,
   View,
@@ -13,6 +13,7 @@ import MainHeader from './Sections/MainHeader';
 import DaySchedule from './Sections/DaySchedule';
 import MainFooter from './Sections/MainFooter';
 import Issue from './Sections/Issue';
+import RankList from '../Ranking/Sections/RankList/RankList';
 export default function Main(props) {
   const navigateToHome = () => {
     props.navigation.navigate('Home');
@@ -26,6 +27,7 @@ export default function Main(props) {
   const navigateToMain = () => {
     props.navigation.navigate('Main');
   };
+  const [stateChange, setstateChange] = useState(1);
   return (
     <View style={{backgroundColor: 'white', height: '100%'}}>
       {/* Header */}
@@ -33,24 +35,33 @@ export default function Main(props) {
         <MainHeader
           navigateToHome={navigateToHome}
           navigateToRanking={navigateToRanking}
+          stateChange={stateChange}
+          setstateChange={setstateChange}
         />
       </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        {/* DayChange */}
-        <View style={{width: '100%', marginTop: 20}}>
-          <DayChange />
+      {stateChange === 1 && (
+        <ScrollView showsVerticalScrollIndicator={false}>
+          {/* DayChange */}
+          <View style={{width: '100%', marginTop: 20}}>
+            <DayChange />
+          </View>
+          <View style={{width: '100%', marginTop: 20}}>
+            <ChatBot />
+          </View>
+          <View style={{width: '100%', marginTop: 20}}>
+            <DaySchedule />
+          </View>
+          <View style={{marginLeft: '5%', marginTop: 20, marginBottom: 150}}>
+            <Text style={{fontFamily: 'NotoSansKR-Bold'}}>I S S U E</Text>
+            <Issue />
+          </View>
+        </ScrollView>
+      )}
+      {stateChange === 3 && (
+        <View style={{width: '100%'}}>
+          <RankList />
         </View>
-        <View style={{width: '100%', marginTop: 20}}>
-          <ChatBot />
-        </View>
-        <View style={{width: '100%', marginTop: 20}}>
-          <DaySchedule />
-        </View>
-        <View style={{marginLeft: '5%', marginTop: 20, marginBottom: 150}}>
-          <Text style={{fontFamily: 'NotoSansKR-Bold'}}>I S S U E</Text>
-          <Issue />
-        </View>
-      </ScrollView>
+      )}
       <View style={styles.FooterStyle}>
         <MainFooter
           navigateToMyFeed={navigateToMyFeed}

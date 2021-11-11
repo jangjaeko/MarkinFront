@@ -30,12 +30,12 @@ export default function RankList() {
       key: 3,
       id: 'Seeun_lynn',
       pImage: issue1,
-      realFollower: 23.5,
+      realFollower: 2333.5,
       Follower: 123.5,
     },
     {
       key: 4,
-      id: 'Seeun_lynn',
+      id: 'lkjhgf45',
       pImage: issue1,
       realFollower: 23.5,
       Follower: 123.5,
@@ -75,6 +75,13 @@ export default function RankList() {
       realFollower: 23.5,
       Follower: 123.5,
     },
+    {
+      key: 10,
+      id: 'Seeun_lynn',
+      pImage: issue1,
+      realFollower: 23.5,
+      Follower: 123.5,
+    },
   ];
   const [myWidth, setmyWidth] = useState(null);
   const onLayout = event => {
@@ -85,30 +92,67 @@ export default function RankList() {
     <View>
       <View style={{flexDirection: 'row', marginTop: 30}}>
         <TouchableOpacity style={styles.greyBtn}>
-          <Text style={{fontSize: 12}}>카테고리</Text>
+          <Text style={{fontSize: 12, fontFamily: 'NotoSansKR-Regular'}}>
+            카테고리
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.greyBtn2}>
-          <Text style={{fontSize: 12}}>팔로워수</Text>
+          <Text style={{fontSize: 12, fontFamily: 'NotoSansKR-Regular'}}>
+            팔로워수
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity style={{flexDirection: 'row', marginLeft: 150}}>
-          <Image source={filter} style={{width: 12, height: 12}} />
-          <Text style={{fontSize: 12, marginLeft: 10}}>팔로워순</Text>
+          <View style={{opacity: 0.5, flexDirection: 'row'}}>
+            <Image
+              source={filter}
+              style={{width: 12, height: 12, marginTop: 5}}
+            />
+            <Text
+              style={{
+                fontSize: 12,
+                marginLeft: 10,
+                fontFamily: 'NotoSansKR-Regular',
+              }}>
+              팔로워순
+            </Text>
+          </View>
         </TouchableOpacity>
       </View>
       <View style={{flexDirection: 'row', marginTop: 20, marginLeft: '5%'}}>
-        <Text style={{fontWeight: 'bold', fontSize: 15}}>순위</Text>
-        <Text style={{fontWeight: 'bold', fontSize: 15, marginLeft: 75}}>
+        <Text
+          style={{
+            fontSize: 15,
+            fontFamily: 'NotoSansKR-Medium',
+          }}>
+          순위
+        </Text>
+        <Text
+          style={{
+            fontSize: 15,
+            marginLeft: 75,
+            fontFamily: 'NotoSansKR-Medium',
+          }}>
           계정
         </Text>
-        <Text style={{fontWeight: 'bold', fontSize: 15, marginLeft: 85}}>
+        <Text
+          style={{
+            fontSize: 15,
+            marginLeft: 85,
+            fontFamily: 'NotoSansKR-Medium',
+          }}>
           실팔로워
         </Text>
-        <Text style={{fontWeight: 'bold', fontSize: 15, marginLeft: 30}}>
+        <Text
+          style={{
+            fontSize: 15,
+            marginLeft: 30,
+            fontFamily: 'NotoSansKR-Medium',
+          }}>
           팔로워
         </Text>
       </View>
       <ScrollView style={{marginTop: 20}}>
-        <View style={{marginBottom: '150%'}}>
+        <View style={{marginBottom: '110%'}}>
           {Categoly.map(item => (
             <View style={styles.outView}>
               <View
@@ -116,24 +160,54 @@ export default function RankList() {
                   flexDirection: 'row',
                   marginLeft: '5%',
                 }}>
-                <Text style={{marginLeft: 7, fontSize: 15}}>{item.key} </Text>
-                <Image
-                  source={item.pImage}
+                <View style={{width: 30}}>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      fontSize: 15,
+                      fontFamily: 'Roboto-Medium',
+                    }}>
+                    {item.key}{' '}
+                  </Text>
+                </View>
+                <View
                   style={{
-                    width: 30,
-                    height: 30,
-                    borderRadius: 30 / 2,
-                    marginTop: -5,
-                    marginLeft: 30,
-                  }}
-                />
-                <Text style={{marginLeft: 8, fontSize: 15}}>{item.id} </Text>
-                <Text style={{marginLeft: 30, fontSize: 15, color: '#FD780F'}}>
-                  {item.realFollower} k{' '}
-                </Text>
-                <Text style={{marginLeft: 10, fontSize: 15, fontWeight: '300'}}>
-                  {item.Follower} k{' '}
-                </Text>
+                    width: 150,
+                    flexDirection: 'row',
+                    marginLeft: 20,
+                  }}>
+                  <Image
+                    source={item.pImage}
+                    style={{
+                      width: 30,
+                      height: 30,
+                      borderRadius: 30 / 2,
+                      marginTop: -5,
+                    }}
+                  />
+                  <Text style={{marginLeft: 8, fontSize: 15}}>{item.id} </Text>
+                </View>
+                <View style={{width: 70}}>
+                  <Text
+                    style={{
+                      fontSize: 15,
+                      color: '#FD780F',
+                      fontFamily: 'NotoSansKR-Regular',
+                      textAlign: 'right',
+                    }}>
+                    {item.realFollower} k{' '}
+                  </Text>
+                </View>
+                <View style={{width: 75}}>
+                  <Text
+                    style={{
+                      fontSize: 15,
+                      fontFamily: 'NotoSansKR-Regular',
+                      textAlign: 'right',
+                    }}>
+                    {item.Follower} k{' '}
+                  </Text>
+                </View>
               </View>
             </View>
           ))}
@@ -153,7 +227,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 2,
     height: 60,
-
     borderStyle: 'solid',
     backgroundColor: 'white',
     elevation: 6,
