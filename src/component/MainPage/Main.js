@@ -14,6 +14,7 @@ import DaySchedule from './Sections/DaySchedule';
 import MainFooter from './Sections/MainFooter';
 import Issue from './Sections/Issue';
 import RankList from '../Ranking/Sections/RankList/RankList';
+import CategoryModal from '../Ranking/Sections/RankList/modals/CategoryModal';
 export default function Main(props) {
   const navigateToHome = () => {
     props.navigation.navigate('Home');
@@ -68,6 +69,7 @@ export default function Main(props) {
           navigateToMain={navigateToMain}
         />
       </View>
+      <CategoryModal />
     </View>
   );
 }
