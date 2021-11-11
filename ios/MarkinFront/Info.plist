@@ -35,32 +35,16 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like access to your photo gallery</string>
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to use your camera</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to save photos to your photo gallery</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to use your microphone (for videos)</string>
-	<key>UIAppFonts</key>
-	<array/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like to save photos to your photo gallery</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like access to your photo gallery</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
@@ -78,6 +62,40 @@
 		<string>SimpleLineIcons.ttf</string>
 		<string>Octicons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>Fontisto.ttf</string>
+		<string>fonts/SpoqaHanSansNeo-Medium.otf</string>
+		<string>fonts/NotoSansKR-Black.otf</string>
+		<string>fonts/NotoSansKR-Bold.otf</string>
+		<string>fonts/NotoSansKR-Light.otf</string>
+		<string>fonts/NotoSansKR-Medium.otf</string>
+		<string>fonts/NotoSansKR-Regular.otf</string>
+		<string>fonts/NotoSansKR-Thin.otf</string>
+		<string>fonts/Roboto-Black.ttf</string>
+		<string>fonts/Roboto-BlackItalic.ttf</string>
+		<string>fonts/Roboto-Bold.ttf</string>
+		<string>fonts/Roboto-BoldItalic.ttf</string>
+		<string>fonts/Roboto-Italic.ttf</string>
+		<string>fonts/Roboto-Light.ttf</string>
+		<string>fonts/Roboto-LightItalic.ttf</string>
+		<string>fonts/Roboto-Medium.ttf</string>
+		<string>fonts/Roboto-MediumItalic.ttf</string>
+		<string>fonts/Roboto-Regular.ttf</string>
+		<string>fonts/Roboto-Thin.ttf</string>
+		<string>fonts/Roboto-ThinItalic.ttf</string>
 	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

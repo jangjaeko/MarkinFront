@@ -14,7 +14,7 @@ const Home = props => {
         onPress={() => {
           props.navigation.navigate('Login');
         }}>
-        <Text>Login</Text>
+        <Text style={{fontFamily: 'NotoSansKR-Medium'}}>Login</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {

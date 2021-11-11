@@ -61,10 +61,11 @@ const styles = StyleSheet.create({
   },
   scheduleText: {
     fontSize: 15,
+    fontFamily: 'NotoSansKR-Medium',
   },
   scheduleTextTime: {
     fontSize: 15,
-    fontWeight: '200',
+    fontFamily: 'NotoSansKR-Thin',
   },
   scheduleTextView: {
     marginLeft: 10,
