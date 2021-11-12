@@ -73,6 +73,7 @@ export default function RankList() {
         handleCatModlaVisable={handleCatModlaVisable}
         showCorF={showCorF}
         handleCorF={handleCorF}
+        setCatModalVis={setCatModalVis}
       />
       {/* 순위 타이틀 */}
       <RTiltle />
