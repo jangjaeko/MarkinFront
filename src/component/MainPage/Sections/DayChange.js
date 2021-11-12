@@ -18,7 +18,7 @@ export default function DayChange(props) {
         <Text
           style={{
             marginLeft: 20,
-            fontWeight: 'bold',
+            fontFamily: 'NotoSansKR-Bold',
             marginTop: 8,
             fontSize: 16,
           }}>
