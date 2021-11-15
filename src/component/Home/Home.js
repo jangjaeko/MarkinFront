@@ -37,6 +37,12 @@ const Home = props => {
       <TouchableOpacity onPress={() => props.navigation.navigate('Ranking')}>
         <Text>Ranking</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => props.navigation.navigate('EnterPage')}>
+        <Text>EnterPage</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => props.navigation.navigate('Search')}>
+        <Text>Search</Text>
+      </TouchableOpacity>
       <Icon name="instagram" size={30} color="#111" />
     </View>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import RankingHeader from './Sections/RankingHeader';
 import Footer from '../MainPage/Sections/MainFooter';
-import Search from './Sections/Search/Search';
+
 import RankList from './Sections/RankList/RankList';
 export default function Ranking(props) {
   const navigateToMain = () => {
