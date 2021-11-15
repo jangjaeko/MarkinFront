@@ -41,7 +41,9 @@ export default function Main(props) {
         />
       </View>
       {stateChange === 1 && (
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          style={{backgroundColor: '#F1F1F1'}}>
           {/* DayChange */}
           <View style={{width: '100%', marginTop: 20}}>
             <DayChange />

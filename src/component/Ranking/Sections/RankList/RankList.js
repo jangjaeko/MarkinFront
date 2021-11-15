@@ -10,14 +10,12 @@ import {
 } from 'react-native';
 import filter from '../../../../icons/filter.png';
 import CategoryModal from './modals/CategoryModal';
-import FNum from './modals/FNum';
 import FollowerModal from './modals/FollwerModal';
 import RList from './RList';
 import RTiltle from './RTiltle';
 export default function RankList() {
   const [myWidth, setmyWidth] = useState(null);
   const [CatModalVis, setCatModalVis] = useState(false);
-  const [FolwModalVis, setFolwModalVis] = useState(false);
   const [FNumModalVis, setFNumModalVis] = useState(false);
   const [showCorF, setshowCorF] = useState(false);
   const onLayout = event => {
@@ -51,7 +49,9 @@ export default function RankList() {
           onPress={handleFolwModalVisable}>
           <Text style={styles.greyBtnText}>팔로워수</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{flexDirection: 'row', marginLeft: 150}}>
+        <TouchableOpacity
+          style={{flexDirection: 'row', marginLeft: 150}}
+          onPress={handleFNumModalVisable}>
           <View style={{opacity: 0.5, flexDirection: 'row'}}>
             <Image
               source={filter}
@@ -74,6 +74,11 @@ export default function RankList() {
         showCorF={showCorF}
         handleCorF={handleCorF}
         setCatModalVis={setCatModalVis}
+      />
+      <FollowerModal
+        handleFNumModalVisable={handleFNumModalVisable}
+        setFNumModalVis={setFNumModalVis}
+        FNumModalVis={FNumModalVis}
       />
       {/* 순위 타이틀 */}
       <RTiltle />
