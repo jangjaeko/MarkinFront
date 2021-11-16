@@ -9,8 +9,8 @@ import {
   Touchable,
 } from 'react-native';
 import filter from '../../../../icons/filter.png';
-import CategoryModal from './modals/CategoryModal';
-import FollowerModal from './modals/FollwerModal';
+import CategoryModal from './modals/CatFolModal/CategoryModal';
+import FollowerModal from './modals/FolNumModal/FollwerModal';
 import RList from './RList';
 import RTiltle from './RTiltle';
 export default function RankList() {

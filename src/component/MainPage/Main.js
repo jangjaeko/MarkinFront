@@ -14,7 +14,7 @@ import DaySchedule from './Sections/DaySchedule';
 import MainFooter from './Sections/MainFooter';
 import Issue from './Sections/Issue';
 import RankList from '../Ranking/Sections/RankList/RankList';
-import CategoryModal from '../Ranking/Sections/RankList/modals/CategoryModal';
+// import CategoryModal from '../Ranking/Sections/RankList/modals/CategoryModal';
 export default function Main(props) {
   const navigateToHome = () => {
     props.navigation.navigate('Home');
@@ -28,6 +28,9 @@ export default function Main(props) {
   const navigateToMain = () => {
     props.navigation.navigate('Main');
   };
+  const navigateToSearch = () => {
+    props.navigation.navigate('Search');
+  };
   const [stateChange, setstateChange] = useState(1);
   return (
     <View style={{backgroundColor: 'white', height: '100%'}}>
@@ -38,6 +41,7 @@ export default function Main(props) {
           navigateToRanking={navigateToRanking}
           stateChange={stateChange}
           setstateChange={setstateChange}
+          navigateToSearch={navigateToSearch}
         />
       </View>
       {stateChange === 1 && (
@@ -71,7 +75,6 @@ export default function Main(props) {
           navigateToMain={navigateToMain}
         />
       </View>
-      <CategoryModal />
     </View>
   );
 }

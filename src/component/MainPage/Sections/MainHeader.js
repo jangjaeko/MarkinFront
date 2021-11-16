@@ -16,7 +16,7 @@ export default function MainHeader(props) {
     <>
       <View style={{marginTop: -20}}>
         <TouchableOpacity
-          onPress={() => props.navigateToHome()}
+          onPress={() => props.navigateToSearch()}
           style={{width: 20, height: 20}}>
           <Icons.Feather
             name="search"
