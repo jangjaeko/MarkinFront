@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-
-export default function NewsFeed() {
+import Icons from '../Icons/Icons';
+export default function MyFeed() {
   return (
     <View>
-      <Text>newsfeed</Text>
+      <Text></Text>
     </View>
   );
 }

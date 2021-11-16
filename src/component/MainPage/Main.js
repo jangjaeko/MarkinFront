@@ -31,6 +31,9 @@ export default function Main(props) {
   const navigateToSearch = () => {
     props.navigation.navigate('Search');
   };
+  const navigateToAlarm = () => {
+    props.navigation.navigate('Alarm');
+  };
   const [stateChange, setstateChange] = useState(1);
   return (
     <View style={{backgroundColor: 'white', height: '100%'}}>
@@ -42,6 +45,7 @@ export default function Main(props) {
           stateChange={stateChange}
           setstateChange={setstateChange}
           navigateToSearch={navigateToSearch}
+          navigateToAlarm={navigateToAlarm}
         />
       </View>
       {stateChange === 1 && (

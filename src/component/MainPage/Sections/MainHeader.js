@@ -26,12 +26,12 @@ export default function MainHeader(props) {
           />
         </TouchableOpacity>
         <Text style={styles.Logo}>MARKIN</Text>
-        <Icons.Feather
-          name="bell"
-          size={20}
-          color="#111"
-          style={{position: 'absolute', right: 60, top: 0}}
-        />
+        <TouchableOpacity
+          onPress={() => props.navigateToAlarm()}
+          style={{position: 'absolute', right: 60, top: 0}}>
+          <Icons.Feather name="bell" size={20} color="#111" />
+        </TouchableOpacity>
+
         <Icons.Ionicons
           name="md-paper-plane-outline"
           size={20}

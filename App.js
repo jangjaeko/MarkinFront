@@ -19,6 +19,7 @@ import YourFeed from './src/component/YourFeed/YourFeed';
 import Ranking from './src/component/Ranking/Ranking';
 import EnterPage from './src/component/Enter/EnterPage';
 import Search from './src/component/Search/Search';
+import Alarm from './src/component/Alarm/Alarm';
 const Stack = createStackNavigator();
 function App() {
   return (
@@ -63,6 +64,11 @@ function App() {
           name="Search"
           component={Search}
           options={{headerShown: true}}
+        />
+        <Stack.Screen
+          name="Alarm"
+          component={Alarm}
+          options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>

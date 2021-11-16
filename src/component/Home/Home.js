@@ -43,6 +43,9 @@ const Home = props => {
       <TouchableOpacity onPress={() => props.navigation.navigate('Search')}>
         <Text>Search</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => props.navigation.navigate('Alarm')}>
+        <Text>Alarm</Text>
+      </TouchableOpacity>
       <Icon name="instagram" size={30} color="#111" />
     </View>
   );
