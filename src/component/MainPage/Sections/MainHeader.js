@@ -31,13 +31,15 @@ export default function MainHeader(props) {
           style={{position: 'absolute', right: 60, top: 0}}>
           <Icons.Feather name="bell" size={20} color="#111" />
         </TouchableOpacity>
-
-        <Icons.Ionicons
-          name="md-paper-plane-outline"
-          size={20}
-          color="#111"
-          style={{position: 'absolute', right: 26, top: 0}}
-        />
+        <TouchableOpacity
+          onPress={() => props.navigateToMessage()}
+          style={{position: 'absolute', right: 26, top: 0}}>
+          <Icons.Ionicons
+            name="md-paper-plane-outline"
+            size={20}
+            color="#111"
+          />
+        </TouchableOpacity>
       </View>
 
       <View>
