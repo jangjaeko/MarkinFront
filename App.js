@@ -21,6 +21,7 @@ import EnterPage from './src/component/Enter/EnterPage';
 import Search from './src/component/Search/Search';
 import Alarm from './src/component/Alarm/Alarm';
 import Message from './src/component/Message/Message';
+import Feed from './src/component/MainPage/Feed/Feed';
 const Stack = createStackNavigator();
 function App() {
   return (
@@ -74,6 +75,11 @@ function App() {
         <Stack.Screen
           name="Message"
           component={Message}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Feed"
+          component={Feed}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

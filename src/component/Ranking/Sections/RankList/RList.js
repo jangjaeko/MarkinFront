@@ -77,7 +77,7 @@ export default function RList() {
   return (
     <View style={{marginBottom: '110%'}}>
       {Categoly.map(item => (
-        <View style={styles.outView}>
+        <View style={styles.outView} key={item.key}>
           <View
             style={{
               flexDirection: 'row',

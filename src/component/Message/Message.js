@@ -17,9 +17,10 @@ export default function Message(props) {
 }
 const styles = StyleSheet.create({
   HeaderStyle: {
-    height: 140,
+    height: 100,
     width: '100%',
     backgroundColor: 'white',
     justifyContent: 'center',
+    paddingTop: 50,
   },
 });

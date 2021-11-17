@@ -90,7 +90,7 @@ export default function MessageSearchBar() {
                 <Text style={styles.listItemText}>{item.title}</Text>
                 <Text style={styles.sumChat}>
                   {' '}
-                  안녕하세요 {/* last ment */}{' '}
+                  안녕하세요 {/* last ment  추후 글자수 제한 필요*/}{' '}
                 </Text>
               </View>
             </View>

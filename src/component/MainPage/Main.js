@@ -14,6 +14,7 @@ import DaySchedule from './Sections/DaySchedule';
 import MainFooter from './Sections/MainFooter';
 import Issue from './Sections/Issue';
 import RankList from '../Ranking/Sections/RankList/RankList';
+import Feed from './Feed/Feed';
 // import CategoryModal from '../Ranking/Sections/RankList/modals/CategoryModal';
 export default function Main(props) {
   const navigateToHome = () => {
@@ -72,6 +73,7 @@ export default function Main(props) {
           </View>
         </ScrollView>
       )}
+      {stateChange === 2 && <Feed />}
       {stateChange === 3 && (
         <View style={{width: '100%'}}>
           <RankList />

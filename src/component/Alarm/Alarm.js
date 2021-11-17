@@ -16,7 +16,8 @@ export default function Alarm(props) {
 
 const styles = StyleSheet.create({
   HeaderStyle: {
-    height: 140,
+    paddingTop: 50,
+    height: 100,
     width: '100%',
     backgroundColor: 'white',
     justifyContent: 'center',
