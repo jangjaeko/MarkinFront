@@ -28,7 +28,8 @@ export default function Search() {
           autoCapitalize={'none'}
           placeholder="ID를 입력하세요"
           onChangeText={onChangeInput}
-          style={styles.input}></TextInput>
+          style={styles.input}
+        />
       </View>
     </View>
   );
@@ -47,5 +48,6 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     marginLeft: '0%',
     paddingLeft: 30,
+    fontFamily: 'NotoSansKR-Regular',
   },
 });

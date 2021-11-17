@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import MessageHeader from './Sections/MessageHeader';
+import SearchBar from './Sections/MessageSearchBar';
 export default function Message(props) {
   const goBack = () => {
     props.navigation.goBack();
@@ -10,6 +11,7 @@ export default function Message(props) {
       <View style={styles.HeaderStyle}>
         <MessageHeader goBack={goBack} />
       </View>
+      <SearchBar />
     </View>
   );
 }
