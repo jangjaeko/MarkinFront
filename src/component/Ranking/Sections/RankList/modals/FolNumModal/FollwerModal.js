@@ -19,12 +19,7 @@ export default function FollwerModal(props) {
         style={{justifyContent: 'flex-end', margin: 0}}
         isVisible={props.FNumModalVis}
         onBackdropPress={props.handleFNumModalVisable}>
-        <View
-          style={{
-            height: 200,
-            backgroundColor: 'white',
-            borderRadius: 35,
-          }}>
+        <View style={styles.ModalWrap}>
           <View style={{marginLeft: '5%', marginTop: '8%'}}>
             <TouchableOpacity
               onPress={handlefollower}
@@ -36,11 +31,10 @@ export default function FollwerModal(props) {
             </TouchableOpacity>
             <TouchableOpacity
               onPress={handleRealFollower}
-              style={{
-                height: 50,
-                marginTop: 20,
-                opacity: props.Sort === 2 ? 1 : 0.5,
-              }}>
+              style={[
+                styles.RFTouchWrap,
+                {opacity: props.Sort === 2 ? 1 : 0.5},
+              ]}>
               <Text style={styles.Textstyle}>실 팔로워 순</Text>
             </TouchableOpacity>
           </View>
@@ -62,5 +56,14 @@ const styles = StyleSheet.create({
     height: 50,
     width: '90%',
     paddingTop: 5,
+  },
+  RFTouchWrap: {
+    height: 50,
+    marginTop: 20,
+  },
+  ModalWrap: {
+    height: 200,
+    backgroundColor: 'white',
+    borderRadius: 35,
   },
 });
