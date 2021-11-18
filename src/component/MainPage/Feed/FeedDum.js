@@ -7,12 +7,21 @@ const FeedDum = [
     pImg: profile,
     userID: 'young_WU',
     FImg: issue1,
+    ment: '내가 제일 좋아하는 겨울 오징어게임',
   },
   {
     id: 2,
     pImg: profile,
     userID: 'saeun_lynn',
     FImg: issue1,
+    ment: '내가 제일 좋아하는 겨울 오징어게임',
+  },
+  {
+    id: 3,
+    pImg: profile,
+    userID: 'saeun_lynn',
+    FImg: issue1,
+    ment: '내가 제일 좋아하는 겨울 오징어게임',
   },
 ];
 

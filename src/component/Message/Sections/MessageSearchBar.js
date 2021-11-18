@@ -48,7 +48,7 @@ export default function MessageSearchBar() {
           autoCorrect={false}
           value={isSearch}
           autoCapitalize={'none'}
-          placeholder="ID를 입력하세요"
+          placeholder="검색"
           onChangeText={onChangeInput}
           style={styles.input}></TextInput>
         {isSearch !== '' ? (

@@ -18,6 +18,7 @@ export default function RankList() {
   const [CatModalVis, setCatModalVis] = useState(false);
   const [FNumModalVis, setFNumModalVis] = useState(false);
   const [showCorF, setshowCorF] = useState(false);
+  const [Sort, setSort] = useState(1);
   const onLayout = event => {
     const {width} = event.nativeEvent.layout;
     setmyWidth(width);
@@ -57,14 +58,7 @@ export default function RankList() {
               source={filter}
               style={{width: 12, height: 12, marginTop: 5}}
             />
-            <Text
-              style={{
-                fontSize: 12,
-                marginLeft: 10,
-                fontFamily: 'NotoSansKR-Regular',
-              }}>
-              팔로워순
-            </Text>
+            <Text style={styles.followerSoon}>팔로워순</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -79,6 +73,8 @@ export default function RankList() {
         handleFNumModalVisable={handleFNumModalVisable}
         setFNumModalVis={setFNumModalVis}
         FNumModalVis={FNumModalVis}
+        Sort={Sort}
+        setSort={setSort}
       />
       {/* 순위 타이틀 */}
       <RTiltle />
@@ -136,5 +132,10 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: 'NotoSansKR-Regular',
     textAlign: 'center',
+  },
+  followerSoon: {
+    fontSize: 12,
+    marginLeft: 10,
+    fontFamily: 'NotoSansKR-Regular',
   },
 });

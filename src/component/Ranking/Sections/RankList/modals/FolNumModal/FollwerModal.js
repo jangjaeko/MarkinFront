@@ -3,6 +3,14 @@ import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import Modal from 'react-native-modal';
 export default function FollwerModal(props) {
+  const handlefollower = () => {
+    props.setSort(1);
+    props.setFNumModalVis(false);
+  };
+  const handleRealFollower = () => {
+    props.setSort(2);
+    props.setFNumModalVis(false);
+  };
   return (
     <GestureRecognizer
       style={{flex: 1}}
@@ -13,19 +21,27 @@ export default function FollwerModal(props) {
         onBackdropPress={props.handleFNumModalVisable}>
         <View
           style={{
-            height: 300,
+            height: 200,
             backgroundColor: 'white',
             borderRadius: 35,
           }}>
-          <View style={{marginLeft: '5%', marginTop: '10%'}}>
-            <TouchableOpacity style={styles.touchWrapstyle}>
-              <Text style={styles.Textstyle}>전체</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.touchWrapstyle}>
-              <Text style={styles.Textstyle}>실 팔로워 순</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={{height: 50, marginTop: 20}}>
+          <View style={{marginLeft: '5%', marginTop: '8%'}}>
+            <TouchableOpacity
+              onPress={handlefollower}
+              style={[
+                styles.touchWrapstyle,
+                {opacity: props.Sort === 1 ? 1 : 0.5},
+              ]}>
               <Text style={styles.Textstyle}>팔로워 순</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={handleRealFollower}
+              style={{
+                height: 50,
+                marginTop: 20,
+                opacity: props.Sort === 2 ? 1 : 0.5,
+              }}>
+              <Text style={styles.Textstyle}>실 팔로워 순</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -36,7 +52,7 @@ export default function FollwerModal(props) {
 const styles = StyleSheet.create({
   Textstyle: {
     fontFamily: 'NotoSansKR-Medium',
-    fontSize: 18,
+    fontSize: 15,
     marginLeft: '3%',
   },
   touchWrapstyle: {
@@ -45,6 +61,6 @@ const styles = StyleSheet.create({
     borderBottomColor: '#00000033',
     height: 50,
     width: '90%',
-    marginTop: 20,
+    paddingTop: 5,
   },
 });
