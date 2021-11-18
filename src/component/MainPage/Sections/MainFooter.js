@@ -10,10 +10,12 @@ export default function MainFooter(props) {
   return (
     <View style={{height: 80}}>
       <View style={{flexDirection: 'row'}}>
-        <View style={{width: '20%', alignItems: 'center'}}>
+        <TouchableOpacity
+          onPress={() => props.navigateToMain()}
+          style={{width: '20%', alignItems: 'center'}}>
           <Image source={home} style={{width: 20, height: 20}} />
           <Text style={styles.focusText}>Home</Text>
-        </View>
+        </TouchableOpacity>
 
         <View style={{width: '20%', alignItems: 'center', opacity: 0.5}}>
           <Image source={managers} style={{width: 20, height: 20}} />

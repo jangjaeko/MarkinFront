@@ -2,9 +2,16 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import MessageHeader from './Sections/MessageHeader';
 import SearchBar from './Sections/MessageSearchBar';
+import MainFooter from '../MainPage/Sections/MainFooter';
 export default function Message(props) {
   const goBack = () => {
     props.navigation.goBack();
+  };
+  const navigateToMyFeed = () => {
+    props.navigation.navigate('YourFeed');
+  };
+  const navigateToMain = () => {
+    props.navigation.navigate('Main');
   };
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
@@ -12,6 +19,12 @@ export default function Message(props) {
         <MessageHeader goBack={goBack} />
       </View>
       <SearchBar />
+      <View style={styles.FooterStyle}>
+        <MainFooter
+          navigateToMyFeed={navigateToMyFeed}
+          navigateToMain={navigateToMain}
+        />
+      </View>
     </View>
   );
 }
@@ -21,6 +34,16 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'white',
     justifyContent: 'center',
-    paddingTop: 50,
+    paddingTop: 40,
+  },
+  FooterStyle: {
+    height: 100,
+    width: '100%',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    borderTopWidth: 1,
+    borderTopColor: 'rgb(212, 212, 212)',
+    position: 'absolute',
+    bottom: 0,
   },
 });

@@ -9,7 +9,7 @@ export default function MessageHeader(props) {
         style={{
           width: 30,
           height: 30,
-          marginTop: 10,
+          marginTop: 0,
           marginLeft: 20,
         }}>
         <Icons.Entypo name="chevron-thin-left" size={20} style={{}} />

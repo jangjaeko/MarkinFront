@@ -9,7 +9,7 @@ export default function AlarmHeader(props) {
         style={{
           width: 30,
           height: 30,
-          marginTop: 10,
+          marginTop: 0,
           marginLeft: 20,
         }}>
         <Icons.Entypo name="chevron-thin-left" size={20} style={{}} />
@@ -20,6 +20,7 @@ export default function AlarmHeader(props) {
           fontFamily: 'NotoSansKR-Medium',
           textAlign: 'center',
           marginLeft: '30%',
+          marginTop: 0,
         }}>
         알림
       </Text>

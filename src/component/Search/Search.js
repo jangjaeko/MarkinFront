@@ -9,7 +9,8 @@ import {
 import Icons from '../Icons/Icons';
 import HotSearch from './Sections/HotSearch';
 import CurrentSearch from './Sections/CurrentSearch';
-export default function Search() {
+import MainFooter from '../MainPage/Sections/MainFooter';
+export default function Search(props) {
   const [isSearch, setisSearch] = useState('');
   const [SearchCat, setSearchCat] = useState(1);
   const [SaveCookie, setSaveCookie] = useState(1);
@@ -22,25 +23,48 @@ export default function Search() {
   const onChangeInput = event => {
     setisSearch(event);
   };
+  const onclear = () => {
+    setisSearch('');
+  };
+  const navigateToMyFeed = () => {
+    props.navigation.navigate('YourFeed');
+  };
+  const navigateToMain = () => {
+    props.navigation.navigate('Main');
+  };
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
-      <View style={{flexDirection: 'row', marginTop: 50}}>
-        <TouchableOpacity style={{zIndex: 10}}>
-          <Icons.Feather
-            name="search"
+      <View style={{flexDirection: 'row', marginTop: 20}}>
+        <TouchableOpacity
+          style={{zIndex: 10}}
+          onPress={() => props.navigation.goBack()}>
+          <Icons.Entypo
+            name="chevron-thin-left"
             size={20}
             color="#111"
-            style={{marginTop: 30, left: 20, opacity: 0.5}}
+            style={{marginTop: 30, left: 25, opacity: 0.5}}
           />
         </TouchableOpacity>
         <TextInput
           value={isSearch}
           autoCapitalize={'none'}
+          autoCorrect={false}
           placeholder="ID를 입력하세요"
           onChangeText={onChangeInput}
           style={styles.input}
         />
+        {isSearch !== '' && (
+          <TouchableOpacity style={{zIndex: 10}} onPress={() => onclear()}>
+            <Icons.MaterialIcons
+              style={{marginTop: 30, right: 35, opacity: 0.5}}
+              name="clear"
+              size={20}
+              color="#111"
+            />
+          </TouchableOpacity>
+        )}
       </View>
+      {/* 인기 검색어  */}
       {SearchCat === 1 && isSearch === '' && (
         <>
           <View style={{flexDirection: 'row', marginTop: 20, marginLeft: 30}}>
@@ -58,6 +82,7 @@ export default function Search() {
           </View>
         </>
       )}
+      {/* 최근 검색어  */}
       {SearchCat === 2 && isSearch === '' && (
         <>
           <View style={{flexDirection: 'row', marginTop: 20, marginLeft: 30}}>
@@ -73,6 +98,7 @@ export default function Search() {
           </View>
         </>
       )}
+      {/* 검색창 연관 검색어  */}
       {isSearch !== '' && (
         <>
           <View style={{flexDirection: 'row', marginTop: 20, marginLeft: 30}}>
@@ -88,6 +114,12 @@ export default function Search() {
           </View>
         </>
       )}
+      <View style={styles.FooterStyle}>
+        <MainFooter
+          navigateToMyFeed={navigateToMyFeed}
+          navigateToMain={navigateToMain}
+        />
+      </View>
     </View>
   );
 }
@@ -130,5 +162,15 @@ const styles = StyleSheet.create({
     width: 100,
     justifyContent: 'center',
     height: 30,
+  },
+  FooterStyle: {
+    height: 100,
+    width: '100%',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    borderTopWidth: 1,
+    borderTopColor: 'rgb(212, 212, 212)',
+    position: 'absolute',
+    bottom: 0,
   },
 });
