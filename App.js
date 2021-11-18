@@ -65,7 +65,7 @@ function App() {
         <Stack.Screen
           name="Search"
           component={Search}
-          options={{headerShown: true}}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Alarm"

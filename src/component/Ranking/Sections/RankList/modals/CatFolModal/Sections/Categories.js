@@ -18,9 +18,15 @@ export default function Categories() {
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[0] % 2 === 0 ? 'red' : 'blue'},
+              {backgroundColor: Selected[0] % 2 === 0 ? 'white' : '#545454'},
             ]}>
-            <Text style={styles.inText}>전체</Text>
+            <Text
+              style={[
+                styles.inText,
+                {color: Selected[0] % 2 === 0 ? 'black' : 'white'},
+              ]}>
+              전체
+            </Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -29,9 +35,15 @@ export default function Categories() {
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[1] % 2 === 0 ? 'red' : 'blue'},
+              {backgroundColor: Selected[1] % 2 === 0 ? 'white' : '#545454'},
             ]}>
-            <Text style={styles.inText}>뷰티</Text>
+            <Text
+              style={[
+                styles.inText,
+                {color: Selected[1] % 2 === 0 ? 'black' : 'white'},
+              ]}>
+              뷰티
+            </Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -40,9 +52,15 @@ export default function Categories() {
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[2] % 2 === 0 ? 'red' : 'blue'},
+              {backgroundColor: Selected[2] % 2 === 0 ? 'white' : '#545454'},
             ]}>
-            <Text style={styles.inText}>동물</Text>
+            <Text
+              style={[
+                styles.inText,
+                {color: Selected[2] % 2 === 0 ? 'black' : 'white'},
+              ]}>
+              동물
+            </Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -51,9 +69,15 @@ export default function Categories() {
           <View
             style={[
               styles.greyBtn5,
-              {backgroundColor: Selected[3] % 2 === 0 ? 'red' : 'blue'},
+              {backgroundColor: Selected[3] % 2 === 0 ? 'white' : '#545454'},
             ]}>
-            <Text style={styles.inText}>엔터테이먼트</Text>
+            <Text
+              style={[
+                styles.inText,
+                {color: Selected[3] % 2 === 0 ? 'black' : 'white'},
+              ]}>
+              엔터테이먼트
+            </Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -65,9 +89,15 @@ export default function Categories() {
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[4] % 2 === 0 ? 'red' : 'blue'},
+              {backgroundColor: Selected[4] % 2 === 0 ? 'white' : '#545454'},
             ]}>
-            <Text style={styles.inText}>운동</Text>
+            <Text
+              style={[
+                styles.inText,
+                {color: Selected[4] % 2 === 0 ? 'black' : 'white'},
+              ]}>
+              운동
+            </Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -76,9 +106,15 @@ export default function Categories() {
           <View
             style={[
               styles.greyBtn4,
-              {backgroundColor: Selected[5] % 2 === 0 ? 'red' : 'blue'},
+              {backgroundColor: Selected[5] % 2 === 0 ? 'white' : '#545454'},
             ]}>
-            <Text style={styles.inText}>디자이너</Text>
+            <Text
+              style={[
+                styles.inText,
+                {color: Selected[5] % 2 === 0 ? 'black' : 'white'},
+              ]}>
+              디자이너
+            </Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -87,9 +123,15 @@ export default function Categories() {
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[6] % 2 === 0 ? 'red' : 'blue'},
+              {backgroundColor: Selected[6] % 2 === 0 ? 'white' : '#545454'},
             ]}>
-            <Text style={styles.inText}>여행</Text>
+            <Text
+              style={[
+                styles.inText,
+                {color: Selected[6] % 2 === 0 ? 'black' : 'white'},
+              ]}>
+              여행
+            </Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -98,9 +140,15 @@ export default function Categories() {
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[7] % 2 === 0 ? 'red' : 'blue'},
+              {backgroundColor: Selected[7] % 2 === 0 ? 'white' : '#545454'},
             ]}>
-            <Text style={styles.inText}>패션</Text>
+            <Text
+              style={[
+                styles.inText,
+                {color: Selected[7] % 2 === 0 ? 'black' : 'white'},
+              ]}>
+              패션
+            </Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -142,7 +190,6 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   inText: {
-    color: 'black',
     fontSize: 15,
     fontFamily: 'Roboto-Light',
   },
