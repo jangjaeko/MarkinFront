@@ -24,7 +24,7 @@ export default function DayChange(props) {
           }}>
           일별 계정 변화
         </Text>
-        <TouchableOpacity style={{marginLeft: 120}} onPress={handleFollow}>
+        <TouchableOpacity style={{marginLeft: 110}} onPress={handleFollow}>
           {FollowChange === 1 ? (
             <View style={styles.Focus}>
               <Text style={styles.FocusText}>팔로워</Text>
@@ -54,7 +54,7 @@ export default function DayChange(props) {
               <Text style={styles.LightText}>팔로워 증가</Text>
             </View>
             <View style={{width: '50%'}}>
-              <Text style={{textAlign: 'right', marginRight: '5%'}}>
+              <Text style={{textAlign: 'right', marginRight: '10%'}}>
                 500 명
               </Text>
             </View>
@@ -64,7 +64,7 @@ export default function DayChange(props) {
               <Text style={styles.LightText}>기존 팔로워 감소</Text>
             </View>
             <View style={{width: '50%'}}>
-              <Text style={{textAlign: 'right', marginRight: '5%'}}>
+              <Text style={{textAlign: 'right', marginRight: '10%'}}>
                 200 명
               </Text>
             </View>
@@ -74,7 +74,7 @@ export default function DayChange(props) {
               <Text style={styles.LightText}>총 팔로워</Text>
             </View>
             <View style={{width: '50%'}}>
-              <Text style={{textAlign: 'right', marginRight: '5%'}}>
+              <Text style={{textAlign: 'right', marginRight: '10%'}}>
                 90,000 명
               </Text>
             </View>
@@ -87,7 +87,7 @@ export default function DayChange(props) {
               <Text style={styles.LightText}>도달 수</Text>
             </View>
             <View style={{width: '50%'}}>
-              <Text style={{textAlign: 'right', marginRight: '5%'}}>
+              <Text style={{textAlign: 'right', marginRight: '10%'}}>
                 500,000 회
               </Text>
             </View>
@@ -97,7 +97,7 @@ export default function DayChange(props) {
               <Text style={styles.LightText}>노출 수</Text>
             </View>
             <View style={{width: '50%'}}>
-              <Text style={{textAlign: 'right', marginRight: '5%'}}>
+              <Text style={{textAlign: 'right', marginRight: '10%'}}>
                 600,000 회
               </Text>
             </View>
@@ -107,7 +107,9 @@ export default function DayChange(props) {
               <Text style={styles.LightText}>댓글</Text>
             </View>
             <View style={{width: '50%'}}>
-              <Text style={{textAlign: 'right', marginRight: '5%'}}>30 명</Text>
+              <Text style={{textAlign: 'right', marginRight: '10%'}}>
+                30 명
+              </Text>
             </View>
           </View>
           <View style={{flexDirection: 'row', marginTop: 10}}>
@@ -115,7 +117,7 @@ export default function DayChange(props) {
               <Text style={styles.LightText}>좋아요</Text>
             </View>
             <View style={{width: '50%'}}>
-              <Text style={{textAlign: 'right', marginRight: '5%'}}>
+              <Text style={{textAlign: 'right', marginRight: '10%'}}>
                 60,000 개
               </Text>
             </View>

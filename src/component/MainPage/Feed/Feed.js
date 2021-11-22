@@ -5,7 +5,7 @@ import FeedDum from './FeedDum';
 import UserInfo from './UserInfo';
 export default function Feed() {
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <UserInfo />
     </ScrollView>
   );

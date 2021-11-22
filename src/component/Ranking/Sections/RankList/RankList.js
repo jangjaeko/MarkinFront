@@ -79,7 +79,7 @@ export default function RankList() {
       {/* 순위 타이틀 */}
       <RTiltle />
       {/* 순위 리스트 */}
-      <ScrollView style={{marginTop: 20}}>
+      <ScrollView style={{marginTop: 20}} showsVerticalScrollIndicator={false}>
         <RList />
       </ScrollView>
     </View>
