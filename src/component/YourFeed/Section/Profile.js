@@ -2,11 +2,6 @@ import React from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import ProfileImage from '../../../images/Profile.png';
 import instaLogo from '../../../icons/instaLogo.png';
-import Knock from '../../../icons/knock.png';
-import fist1 from '../../../icons/fist1.png';
-import fist2 from '../../../icons/fist2.png';
-import fist3 from '../../../icons/fist3.png';
-import fist4 from '../../../icons/fist4.png';
 import fist5 from '../../../icons/fist5.png';
 
 export default function Profile() {

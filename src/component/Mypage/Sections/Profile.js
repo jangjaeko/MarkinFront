@@ -3,7 +3,7 @@ import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import ProfileImage from '../../../images/Profile.png';
 export default function Profile() {
   return (
-    <View style={{width: '90%', marginLeft: '5%', marginBottom: 40}}>
+    <View style={{width: '90%', marginLeft: '5%', marginBottom: 25}}>
       <View style={{flexDirection: 'row'}}>
         <Image
           source={ProfileImage}
@@ -23,9 +23,9 @@ export default function Profile() {
           </View>
         </View>
       </View>
-      <TouchableOpacity style={styles.addFeedFrame}>
+      {/* <TouchableOpacity style={styles.addFeedFrame}>
         <Text style={styles.btnText}>+ 게시글 추가</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 }
