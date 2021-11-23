@@ -11,7 +11,7 @@ import DayChange from './Sections/DayChange';
 import ChatBot from './Sections/ChatBot';
 import MainHeader from './Sections/MainHeader';
 import DaySchedule from './Sections/DaySchedule';
-import MainFooter from './Sections/MainFooter';
+import MainFooter from '../Footer/MainFooter';
 import Issue from './Sections/Issue';
 import RankList from '../Ranking/Sections/RankList/RankList';
 import Feed from './Feed/Feed';

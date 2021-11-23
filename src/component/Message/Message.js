@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import MessageHeader from './Sections/MessageHeader';
 import SearchBar from './Sections/MessageSearchBar';
-import MainFooter from '../MainPage/Sections/MainFooter';
+import MainFooter from '../Footer/MainFooter';
 export default function Message(props) {
   const goBack = () => {
     props.navigation.goBack();

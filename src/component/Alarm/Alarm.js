@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import AlarmHeader from './AlarmHeader';
-import MainFooter from '../MainPage/Sections/MainFooter';
+import MainFooter from '../Footer/MainFooter';
 export default function Alarm(props) {
   const goBack = () => {
     props.navigation.goBack();

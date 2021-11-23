@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
-import calendaricon from '../../../icons/calendaricon.png';
-import campaign from '../../../icons/campaign.png';
-import home from '../../../icons/home.png';
-import managers from '../../../icons/managers.png';
-import myfeed from '../../../icons/myfeed.png';
+import calendaricon from '../../icons/calendaricon.png';
+import campaign from '../../icons/campaign.png';
+import home from '../../icons/home.png';
+import managers from '../../icons/managers.png';
+import myfeed from '../../icons/myfeed.png';
 
 export default function MainFooter(props) {
   return (

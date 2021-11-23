@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import RankingHeader from './Sections/RankingHeader';
-import Footer from '../MainPage/Sections/MainFooter';
+import Footer from '../Footer/MainFooter';
 
 import RankList from './Sections/RankList/RankList';
 export default function Ranking(props) {

@@ -9,7 +9,7 @@ import {
 import Icons from '../Icons/Icons';
 import HotSearch from './Sections/HotSearch';
 import CurrentSearch from './Sections/CurrentSearch';
-import MainFooter from '../MainPage/Sections/MainFooter';
+import MainFooter from '../Footer/MainFooter';
 export default function Search(props) {
   const [isSearch, setisSearch] = useState('');
   const [SearchCat, setSearchCat] = useState(1);
