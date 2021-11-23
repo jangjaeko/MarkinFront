@@ -1,18 +1,26 @@
 import React from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
-import YourFeedHeader from './Section/YourFeedHeader';
-import YourFeedFooter from './Section/YourFeedFooter';
-import Profile from './Section/Profile';
-import Pictures from './Section/Pictures';
-export default function MyFeed() {
+import MyFeedHeader from './Sections/MyFeedHeader';
+import MyfeedFooter from '../Footer/MyfeedFooter';
+import Profile from './Sections/Profile';
+export default function MyFeed(props) {
+  const navigateToMain = () => {
+    props.navigation.navigate('Main');
+  };
   return (
-    <View style={{backgroundColor: 'white', height: '100%'}}>
-      <View style={styles.HeaderStyle}></View>
-      <View style={{width: '90%', marginLeft: '5%'}}></View>
+    <View style={{height: '100%'}}>
+      <View style={styles.HeaderStyle}>
+        <MyFeedHeader />
+      </View>
+      <View style={{width: '100%', backgroundColor: 'white'}}>
+        <Profile />
+      </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{width: '100%'}}></View>
       </ScrollView>
-      <View style={styles.FooterStyle}></View>
+      <View style={styles.FooterStyle}>
+        <MyfeedFooter navigateToMain={navigateToMain} />
+      </View>
     </View>
   );
 }

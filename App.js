@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  Section,
-} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from './src/component/Home/Home';
@@ -22,6 +13,7 @@ import Search from './src/component/Search/Search';
 import Alarm from './src/component/Alarm/Alarm';
 import Message from './src/component/Message/Message';
 import Feed from './src/component/MainPage/Feed/Feed';
+import MyFeed from './src/component/Mypage/MyFeed';
 const Stack = createStackNavigator();
 function App() {
   return (
@@ -80,6 +72,11 @@ function App() {
         <Stack.Screen
           name="Feed"
           component={Feed}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MyFeed"
+          component={MyFeed}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

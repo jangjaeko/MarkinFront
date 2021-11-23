@@ -6,32 +6,34 @@ import home from '../../icons/home.png';
 import managers from '../../icons/managers.png';
 import myfeed from '../../icons/myfeed.png';
 
-export default function MainFooter(props) {
+export default function CalendarFooter(props) {
   return (
     <View style={{height: 80}}>
       <View style={{flexDirection: 'row'}}>
         <TouchableOpacity
-          onPress={() => props.navigateToMain()}
-          style={styles.focusSpace}>
+          //   onPress={() => props.navigateToMain()}
+          style={styles.unfocusSpace}>
           <Image source={home} style={{width: 20, height: 20}} />
-          <Text style={styles.focusText}>Home</Text>
+          <Text style={styles.underText}>Home</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.unfocusSpace}>
           <Image source={managers} style={{width: 20, height: 20}} />
           <Text style={styles.underText}>Manager</Text>
         </TouchableOpacity>
+
         <TouchableOpacity style={styles.unfocusSpace}>
           <Image source={campaign} style={{width: 20, height: 20}} />
           <Text style={styles.underText}>Campaign</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.unfocusSpace}>
+        <TouchableOpacity style={styles.focusSpace}>
           <Image source={calendaricon} style={{width: 20, height: 20}} />
-          <Text style={styles.underText}>Calendar</Text>
+          <Text style={styles.focusText}>Calendar</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
-          onPress={() => props.navigateToMyFeed()}
+          //   onPress={() => props.navigateToMyFeed()}
           style={styles.unfocusSpace}>
           <Image source={myfeed} style={{width: 20, height: 20}} />
           <Text style={styles.underText}>Myfeed</Text>

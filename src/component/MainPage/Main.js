@@ -1,11 +1,5 @@
 import React, {useState} from 'react';
-import {
-  ScrollView,
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import {ScrollView, View, Text, StyleSheet} from 'react-native';
 import Icons from '../Icons/Icons';
 import DayChange from './Sections/DayChange';
 import ChatBot from './Sections/ChatBot';
@@ -15,13 +9,13 @@ import MainFooter from '../Footer/MainFooter';
 import Issue from './Sections/Issue';
 import RankList from '../Ranking/Sections/RankList/RankList';
 import Feed from './Feed/Feed';
-// import CategoryModal from '../Ranking/Sections/RankList/modals/CategoryModal';
+
 export default function Main(props) {
   const navigateToHome = () => {
     props.navigation.navigate('Home');
   };
   const navigateToMyFeed = () => {
-    props.navigation.navigate('YourFeed');
+    props.navigation.navigate('MyFeed');
   };
   const navigateToRanking = () => {
     props.navigation.navigate('Ranking');
@@ -38,7 +32,9 @@ export default function Main(props) {
   const navigateToMessage = () => {
     props.navigation.navigate('Message');
   };
+
   const [stateChange, setstateChange] = useState(1);
+
   return (
     <View style={{backgroundColor: 'white', height: '100%'}}>
       {/* Header */}

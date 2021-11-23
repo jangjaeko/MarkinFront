@@ -6,15 +6,15 @@ import home from '../../icons/home.png';
 import managers from '../../icons/managers.png';
 import myfeed from '../../icons/myfeed.png';
 
-export default function MainFooter(props) {
+export default function MyfeedFooter(props) {
   return (
     <View style={{height: 80}}>
       <View style={{flexDirection: 'row'}}>
         <TouchableOpacity
           onPress={() => props.navigateToMain()}
-          style={styles.focusSpace}>
+          style={styles.unfocusSpace}>
           <Image source={home} style={{width: 20, height: 20}} />
-          <Text style={styles.focusText}>Home</Text>
+          <Text style={styles.underText}>Home</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.unfocusSpace}>
@@ -31,10 +31,10 @@ export default function MainFooter(props) {
           <Text style={styles.underText}>Calendar</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => props.navigateToMyFeed()}
-          style={styles.unfocusSpace}>
+          //   onPress={() => props.navigateToMyFeed()}
+          style={styles.focusSpace}>
           <Image source={myfeed} style={{width: 20, height: 20}} />
-          <Text style={styles.underText}>Myfeed</Text>
+          <Text style={styles.focusText}>Myfeed</Text>
         </TouchableOpacity>
       </View>
     </View>
