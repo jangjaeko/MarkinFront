@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text, StyleSheet, ScrollView, Image} from 'react-native';
-import MyFeedHeader from './Sections/MyFeedHeader';
+import MyFeedHeader from './Header/MyFeedHeader';
 import MyfeedFooter from '../Footer/MyfeedFooter';
-import Profile from './Sections/Profile';
-import Pictures from './Sections/Pictures';
-import filterimage from '../../icons/filter.png';
+import Profile from './InstaSections/Profile';
+import Pictures from './InstaSections/Pictures';
+
 export default function MyFeed(props) {
   const navigateToMain = () => {
     props.navigation.navigate('Main');
@@ -22,24 +22,11 @@ export default function MyFeed(props) {
         }}>
         <Profile />
       </View>
-      <View
-        style={{
-          flexDirection: 'row',
-          marginLeft: '80%',
-          marginTop: 10,
-          marginBottom: 10,
-        }}>
-        <Image
-          source={filterimage}
-          style={{width: 10, height: 10, marginTop: 6, marginRight: 5}}
-        />
-        <Text style={{fontFamily: 'NotoSansKR-Regular'}}>최신순</Text>
+
+      <View style={{width: '100%'}}>
+        <Pictures />
       </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={{width: '100%'}}>
-          <Pictures />
-        </View>
-      </ScrollView>
+
       <View style={styles.FooterStyle}>
         <MyfeedFooter navigateToMain={navigateToMain} />
       </View>
