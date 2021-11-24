@@ -1,11 +1,13 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
-export default function EnterPage() {
+export default function EnterPage(props) {
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       <View>
-        <TouchableOpacity style={styles.btnDesign}>
+        <TouchableOpacity
+          style={styles.btnDesign}
+          onPress={() => props.navigation.navigate('ChooseWay')}>
           <Text style={styles.btnText}>시작하기</Text>
         </TouchableOpacity>
       </View>

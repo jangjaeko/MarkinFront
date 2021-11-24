@@ -8,12 +8,13 @@ import ImagePickerex from './src/component/ImagePicker/ImagePickerex';
 import Main from './src/component/MainPage/Main';
 import YourFeed from './src/component/YourFeed/YourFeed';
 import Ranking from './src/component/Ranking/Ranking';
-import EnterPage from './src/component/Enter/EnterPage';
+import EnterPage from './src/component/SignIn/Enter/EnterPage';
 import Search from './src/component/Search/Search';
 import Alarm from './src/component/Alarm/Alarm';
 import Message from './src/component/Message/Message';
 import Feed from './src/component/MainPage/Feed/Feed';
 import MyFeed from './src/component/Mypage/MyFeed';
+import ChooseWay from './src/component/SignIn/ChooseWay/ChooseWay';
 const Stack = createStackNavigator();
 function App() {
   return (
@@ -77,6 +78,11 @@ function App() {
         <Stack.Screen
           name="MyFeed"
           component={MyFeed}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ChooseWay"
+          component={ChooseWay}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
