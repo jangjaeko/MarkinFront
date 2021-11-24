@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import Icons from '../Icons/Icons';
+import Icons from '../../Icons/Icons';
 export default function AlarmHeader(props) {
   return (
     <View style={{flexDirection: 'row', width: '100%'}}>

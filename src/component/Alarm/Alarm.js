@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
-import AlarmHeader from './AlarmHeader';
+import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
+import AlarmHeader from './Sections/AlarmHeader';
 import MainFooter from '../Footer/MainFooter';
+import AlarmListing from './Sections/AlarmListing';
 export default function Alarm(props) {
   const goBack = () => {
     props.navigation.goBack();
@@ -17,6 +18,15 @@ export default function Alarm(props) {
       <View style={styles.HeaderStyle}>
         <AlarmHeader goBack={goBack} />
       </View>
+      <TouchableOpacity
+        style={{
+          width: '100%',
+          height: 70,
+          justifyContent: 'center',
+          paddingLeft: '5%',
+        }}>
+        <AlarmListing />
+      </TouchableOpacity>
       <View style={styles.FooterStyle}>
         <MainFooter
           navigateToMyFeed={navigateToMyFeed}
