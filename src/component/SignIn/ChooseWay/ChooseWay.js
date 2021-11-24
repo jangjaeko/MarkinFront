@@ -1,14 +1,23 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
-
 import Icon from 'react-native-vector-icons/AntDesign';
-export default function ChooseWay() {
+export default function ChooseWay(props) {
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
-      <View style={{position: 'absolute', top: 300, marginLeft: '5%'}}>
-        <Text>MARKIN의</Text>
-        <Text>특별한 관리를 받으세요</Text>
-        <Text>당신의 특별한 하루를 마킨과 함께하세요</Text>
+      <View style={{position: 'absolute', top: 200, marginLeft: '5%'}}>
+        <Text style={{fontFamily: 'Roboto-Bold', fontSize: 24}}>MARKIN의</Text>
+        <Text style={{fontFamily: 'Roboto-Bold', fontSize: 24, marginTop: 8}}>
+          특별한 관리를 받으세요
+        </Text>
+        <Text
+          style={{
+            fontFamily: 'NotoSansKR-Regular',
+            fontSize: 14,
+            color: '#676767',
+            marginTop: 8,
+          }}>
+          당신의 특별한 하루를 마킨과 함께하세요
+        </Text>
       </View>
       <View style={styles.btnView}>
         <TouchableOpacity
@@ -27,6 +36,7 @@ export default function ChooseWay() {
           <Text style={[styles.btnText, {color: 'white'}]}>구글로 로그인</Text>
         </TouchableOpacity>
         <TouchableOpacity
+          onPress={() => props.navigation.navigate('Terms')}
           style={[{backgroundColor: 'white', marginTop: 10}, styles.btnDesign]}>
           <Icon name="mail" size={30} color="black" />
           <Text style={[styles.btnText, {color: 'black'}]}>
@@ -43,9 +53,13 @@ export default function ChooseWay() {
           flexDirection: 'row',
           marginLeft: '5%',
         }}>
-        <Text>이미 계정이 있다면?</Text>
+        <Text style={styles.belowText}>이미 계정이 있다면?</Text>
         <TouchableOpacity>
-          <Text style={{textDecorationLine: 'underline', marginLeft: 10}}>
+          <Text
+            style={[
+              {textDecorationLine: 'underline', marginLeft: 10},
+              styles.belowText,
+            ]}>
             로그인하기
           </Text>
         </TouchableOpacity>
@@ -77,5 +91,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 20,
     marginTop: 2.5,
+  },
+  belowText: {
+    fontFamily: 'NotoSansKR-Medium',
   },
 });

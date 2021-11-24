@@ -15,6 +15,7 @@ import Message from './src/component/Message/Message';
 import Feed from './src/component/MainPage/Feed/Feed';
 import MyFeed from './src/component/Mypage/MyFeed';
 import ChooseWay from './src/component/SignIn/ChooseWay/ChooseWay';
+import Terms from './src/component/SignIn/Terms/Terms';
 const Stack = createStackNavigator();
 function App() {
   return (
@@ -83,6 +84,11 @@ function App() {
         <Stack.Screen
           name="ChooseWay"
           component={ChooseWay}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Terms"
+          component={Terms}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
