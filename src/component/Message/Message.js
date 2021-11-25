@@ -7,8 +7,8 @@ export default function Message(props) {
   const goBack = () => {
     props.navigation.goBack();
   };
-  const navigateToMyFeed = () => {
-    props.navigation.navigate('YourFeed');
+  const navigateToMyPage = () => {
+    props.navigation.navigate('MyPage');
   };
   const navigateToMain = () => {
     props.navigation.navigate('Main');
@@ -21,7 +21,7 @@ export default function Message(props) {
       <SearchBar />
       <View style={styles.FooterStyle}>
         <MainFooter
-          navigateToMyFeed={navigateToMyFeed}
+          navigateToMyPage={navigateToMyPage}
           navigateToMain={navigateToMain}
         />
       </View>

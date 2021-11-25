@@ -14,8 +14,8 @@ export default function Main(props) {
   const navigateToHome = () => {
     props.navigation.navigate('Home');
   };
-  const navigateToMyFeed = () => {
-    props.navigation.navigate('MyFeed');
+  const navigateToMyPage = () => {
+    props.navigation.navigate('MyPage');
   };
   const navigateToRanking = () => {
     props.navigation.navigate('Ranking');
@@ -77,7 +77,7 @@ export default function Main(props) {
       )}
       <View style={styles.FooterStyle}>
         <MainFooter
-          navigateToMyFeed={navigateToMyFeed}
+          navigateToMyPage={navigateToMyPage}
           navigateToMain={navigateToMain}
         />
       </View>

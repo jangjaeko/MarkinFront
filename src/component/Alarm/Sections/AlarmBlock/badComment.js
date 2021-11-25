@@ -7,6 +7,7 @@ export default function BadComment(props) {
       <View style={{flexDirection: 'row'}}>
         <View
           style={{
+            marginLeft: '5%',
             width: 40,
             height: 40,
             backgroundColor: '#CFC2FF',

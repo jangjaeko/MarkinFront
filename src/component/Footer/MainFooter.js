@@ -31,10 +31,10 @@ export default function MainFooter(props) {
           <Text style={styles.underText}>Calendar</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => props.navigateToMyFeed()}
+          onPress={() => props.navigateToMyPage()}
           style={styles.unfocusSpace}>
           <Image source={myfeed} style={{width: 20, height: 20}} />
-          <Text style={styles.underText}>Myfeed</Text>
+          <Text style={styles.underText}>MyPage</Text>
         </TouchableOpacity>
       </View>
     </View>

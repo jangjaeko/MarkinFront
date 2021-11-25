@@ -7,7 +7,7 @@ export default function Campaign(props) {
       <View style={{flexDirection: 'row'}}>
         <Image
           source={props.img}
-          style={{width: 40, height: 40, borderRadius: 10}}
+          style={{width: 40, height: 40, borderRadius: 10, marginLeft: '5%'}}
         />
         <Text
           style={{

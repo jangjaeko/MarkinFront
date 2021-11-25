@@ -6,14 +6,14 @@ import Home from './src/component/Home/Home';
 import Login from './src/component/Login/Login';
 import ImagePickerex from './src/component/ImagePicker/ImagePickerex';
 import Main from './src/component/MainPage/Main';
-import YourFeed from './src/component/YourFeed/YourFeed';
+import YourFeed from './src/component/YourPage/YourFeed';
 import Ranking from './src/component/Ranking/Ranking';
 import EnterPage from './src/component/SignIn/Enter/EnterPage';
 import Search from './src/component/Search/Search';
 import Alarm from './src/component/Alarm/Alarm';
 import Message from './src/component/Message/Message';
 import Feed from './src/component/MainPage/Feed/Feed';
-import MyFeed from './src/component/Mypage/MyFeed';
+import MyPage from './src/component/Mypage/MyPage';
 import ChooseWay from './src/component/SignIn/ChooseWay/ChooseWay';
 import Terms from './src/component/SignIn/Terms/Terms';
 const Stack = createStackNavigator();
@@ -77,8 +77,8 @@ function App() {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="MyFeed"
-          component={MyFeed}
+          name="MyPage"
+          component={MyPage}
           options={{headerShown: false}}
         />
         <Stack.Screen

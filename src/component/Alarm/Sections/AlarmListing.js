@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import AlarmList from './AlarmList';
 import Knock from './AlarmBlock/Knock';
 import Friending from './AlarmBlock/Friending';
@@ -17,7 +17,12 @@ export default function AlarmListing() {
             </TouchableOpacity>
           )}
           {item.Sort === 1 && (
-            <TouchableOpacity style={{height: 80, justifyContent: 'center'}}>
+            <TouchableOpacity
+              style={{
+                height: 80,
+                justifyContent: 'center',
+                backgroundColor: '#F2F2F2',
+              }}>
               <Friending id={item.id} img={item.img} uName={item.uName} />
             </TouchableOpacity>
           )}

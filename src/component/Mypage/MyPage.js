@@ -5,7 +5,7 @@ import MyfeedFooter from '../Footer/MyfeedFooter';
 import Profile from './InstaSections/Profile';
 import Pictures from './InstaSections/Pictures';
 
-export default function MyFeed(props) {
+export default function MyPage(props) {
   const navigateToMain = () => {
     props.navigation.navigate('Main');
   };

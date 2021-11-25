@@ -14,8 +14,8 @@ export default function Alarm(props) {
   const goBack = () => {
     props.navigation.goBack();
   };
-  const navigateToMyFeed = () => {
-    props.navigation.navigate('YourFeed');
+  const navigateToMyPage = () => {
+    props.navigation.navigate('YourPage');
   };
   const navigateToMain = () => {
     props.navigation.navigate('Main');
@@ -28,13 +28,12 @@ export default function Alarm(props) {
       <ScrollView
         style={{
           width: '100%',
-          paddingLeft: '5%',
         }}>
         <AlarmListing />
       </ScrollView>
       <View style={styles.FooterStyle}>
         <MainFooter
-          navigateToMyFeed={navigateToMyFeed}
+          navigateToMyPage={navigateToMyPage}
           navigateToMain={navigateToMain}
         />
       </View>
