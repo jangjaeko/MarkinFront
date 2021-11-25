@@ -4,7 +4,7 @@ import AlarmList from './AlarmList';
 export default function AlarmListing() {
   return (
     <>
-      {AlarmList.map(item => (
+      {AlarmList.reverse().map(item => (
         <View key={item.id}>
           {item.Sort === 0 && (
             <View>
