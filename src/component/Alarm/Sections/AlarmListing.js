@@ -1,39 +1,47 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import AlarmList from './AlarmList';
+import Knock from './AlarmBlock/Knock';
+import Friending from './AlarmBlock/Friending';
+import Campaign from './AlarmBlock/Campaign';
+import Calendar from './AlarmBlock/Calendar';
+import BadComment from './AlarmBlock/badComment';
 export default function AlarmListing() {
   return (
     <>
       {AlarmList.reverse().map(item => (
         <View key={item.id}>
           {item.Sort === 0 && (
-            <View>
-              <Text>000</Text>
-            </View>
+            <TouchableOpacity style={{height: 80, justifyContent: 'center'}}>
+              <Knock id={item.id} img={item.img} uName={item.uName} />
+            </TouchableOpacity>
           )}
           {item.Sort === 1 && (
-            <View>
-              <Text>111</Text>
-            </View>
+            <TouchableOpacity style={{height: 80, justifyContent: 'center'}}>
+              <Friending id={item.id} img={item.img} uName={item.uName} />
+            </TouchableOpacity>
           )}
           {item.Sort === 2 && (
-            <View>
-              <Text>2</Text>
-            </View>
+            <TouchableOpacity style={{height: 80, justifyContent: 'center'}}>
+              <Campaign id={item.id} img={item.img} uName={item.uName} />
+            </TouchableOpacity>
           )}
           {item.Sort === 3 && (
-            <View>
-              <Text>3</Text>
-            </View>
+            <TouchableOpacity style={{height: 80, justifyContent: 'center'}}>
+              <Calendar id={item.id} img={item.img} uName={item.uName} />
+            </TouchableOpacity>
           )}
           {item.Sort === 4 && (
-            <View>
-              <Text>4</Text>
-            </View>
+            <TouchableOpacity style={{height: 80, justifyContent: 'center'}}>
+              <BadComment id={item.id} Bnum={item.Bnum} />
+            </TouchableOpacity>
           )}
         </View>
       ))}
     </>
   );
 }
+
+const styles = StyleSheet.create({});
+
 // 역순으로 출력 혹은 아래로 내려가고 위쪽으로 쌓이도록

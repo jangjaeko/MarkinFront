@@ -1,5 +1,12 @@
 import React from 'react';
-import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 import AlarmHeader from './Sections/AlarmHeader';
 import MainFooter from '../Footer/MainFooter';
 import AlarmListing from './Sections/AlarmListing';
@@ -18,15 +25,13 @@ export default function Alarm(props) {
       <View style={styles.HeaderStyle}>
         <AlarmHeader goBack={goBack} />
       </View>
-      <TouchableOpacity
+      <ScrollView
         style={{
           width: '100%',
-          height: 70,
-          justifyContent: 'center',
           paddingLeft: '5%',
         }}>
         <AlarmListing />
-      </TouchableOpacity>
+      </ScrollView>
       <View style={styles.FooterStyle}>
         <MainFooter
           navigateToMyFeed={navigateToMyFeed}
@@ -44,6 +49,7 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'white',
     justifyContent: 'center',
+    marginBottom: 0,
   },
   FooterStyle: {
     height: 100,
