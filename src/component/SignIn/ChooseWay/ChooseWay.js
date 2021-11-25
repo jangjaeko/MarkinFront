@@ -1,6 +1,7 @@
 import React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {Image, StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import appLogo from '../../../images/appLogo.png';
 export default function ChooseWay(props) {
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
@@ -21,27 +22,69 @@ export default function ChooseWay(props) {
       </View>
       <View style={styles.btnView}>
         <TouchableOpacity
-          style={[{backgroundColor: 'black'}, styles.btnDesign]}>
-          <Icon name="instagram" size={30} color="white" />
+          style={[
+            {justifyContent: 'center', backgroundColor: '#433FFF'},
+            styles.btnDesign,
+          ]}>
+          <Icon
+            name="instagram"
+            size={30}
+            color="white"
+            style={{top: 10, left: 32, position: 'absolute'}}
+          />
           <Text style={[styles.btnText, {color: 'white'}]}>
-            인스타그램으로 로그인
+            Instagram으로 로그인
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[
-            {backgroundColor: '#FF4B4B', marginTop: 10},
+            {
+              justifyContent: 'center',
+              backgroundColor: '#FF4B4B',
+            },
             styles.btnDesign,
           ]}>
-          <Icon name="google" size={30} color="white" />
-          <Text style={[styles.btnText, {color: 'white'}]}>구글로 로그인</Text>
+          <Icon
+            name="google"
+            size={30}
+            color="white"
+            style={{top: 10, left: 32, position: 'absolute'}}
+          />
+          <Text style={[styles.btnText, {color: 'white'}]}>
+            Google로 로그인
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => props.navigation.navigate('Terms')}
-          style={[{backgroundColor: 'white', marginTop: 10}, styles.btnDesign]}>
-          <Icon name="mail" size={30} color="black" />
-          <Text style={[styles.btnText, {color: 'black'}]}>
-            이메일로 로그인
-          </Text>
+          style={[
+            {justifyContent: 'center', backgroundColor: 'white'},
+            styles.btnDesign,
+          ]}>
+          <Icon
+            name="mail"
+            size={30}
+            color="black"
+            style={{top: 10, left: 32, position: 'absolute'}}
+          />
+          <Text style={[styles.btnText, {color: 'black'}]}>Email로 로그인</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate('Terms')}
+          style={[
+            {justifyContent: 'center', backgroundColor: 'black'},
+            styles.btnDesign,
+          ]}>
+          <Image
+            source={appLogo}
+            style={{
+              width: 45,
+              height: 45,
+              top: 5,
+              left: 23,
+              position: 'absolute',
+            }}
+          />
+          <Text style={[styles.btnText, {color: 'white'}]}>Apple로 로그인</Text>
         </TouchableOpacity>
       </View>
       <View
@@ -71,13 +114,13 @@ export default function ChooseWay(props) {
 const styles = StyleSheet.create({
   btnView: {
     position: 'absolute',
-    top: 550,
+    top: 430,
     marginLeft: '5%',
     width: '90%',
   },
   btnDesign: {
     height: 50,
-    borderRadius: 30,
+    borderRadius: 5,
     flexDirection: 'row',
     paddingTop: 10,
     paddingLeft: 30,
@@ -85,12 +128,12 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 1, height: 1},
     shadowOpacity: 0.8,
     shadowRadius: 1,
+    marginTop: 15,
   },
   btnText: {
     fontFamily: 'NotoSansKR-Regular',
-    fontSize: 16,
-    marginLeft: 20,
-    marginTop: 2.5,
+    fontSize: 19,
+    marginLeft: -10,
   },
   belowText: {
     fontFamily: 'NotoSansKR-Medium',

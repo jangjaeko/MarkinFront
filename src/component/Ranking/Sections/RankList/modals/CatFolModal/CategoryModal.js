@@ -31,7 +31,9 @@ export default function CategoryModal(props) {
                 </TouchableOpacity>
               </View>
               <FSlider />
-              <TouchableOpacity style={styles.settingBut}>
+              <TouchableOpacity
+                style={styles.settingBut}
+                onPress={() => props.setCatModalVis(false)}>
                 <Text style={styles.settingText}> 설정 </Text>
               </TouchableOpacity>
             </>
@@ -49,7 +51,9 @@ export default function CategoryModal(props) {
                 </TouchableOpacity>
               </View>
               <Categories />
-              <TouchableOpacity style={styles.settingBut}>
+              <TouchableOpacity
+                style={styles.settingBut}
+                onPress={() => props.setCatModalVis(false)}>
                 <Text style={styles.settingText}> 설정 </Text>
               </TouchableOpacity>
             </>
