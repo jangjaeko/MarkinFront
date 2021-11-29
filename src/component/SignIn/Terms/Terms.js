@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 
-export default function Terms() {
+export default function Terms(props) {
   const [isSelected, setisSelected] = useState(false);
   return (
     <View style={{flex: 1, backgroundColor: 'white', paddingTop: '15%'}}>
@@ -38,6 +38,13 @@ export default function Terms() {
           <Text style={styles.innerText}>서비스 이용약관(필수)</Text>
         </View>
         <View style={styles.TermsLet}></View>
+      </View>
+      <View>
+        <TouchableOpacity
+          style={styles.btnDesign}
+          onPress={() => props.navigation.navigate('PhonNum')}>
+          <Text style={styles.btnText}>다음으로</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -79,5 +86,22 @@ const styles = StyleSheet.create({
     top: 300,
     marginLeft: '5%',
     width: '90%',
+  },
+  btnDesign: {
+    backgroundColor: '#FD780F',
+    width: '90%',
+    height: 50,
+    borderRadius: 10,
+    position: 'absolute',
+    left: '5%',
+    top: 600,
+    justifyContent: 'center',
+  },
+  btnText: {
+    textAlign: 'center',
+    color: 'white',
+    borderRadius: 10,
+    fontFamily: 'NotoSansKR-Medium',
+    fontSize: 18,
   },
 });

@@ -16,6 +16,8 @@ import Feed from './src/component/MainPage/Feed/Feed';
 import MyPage from './src/component/Mypage/MyPage';
 import ChooseWay from './src/component/SignIn/ChooseWay/ChooseWay';
 import Terms from './src/component/SignIn/Terms/Terms';
+import PhonNum from './src/component/SignIn/PhonNum/PhonNum';
+import Name from './src/component/SignIn/Name/Name';
 const Stack = createStackNavigator();
 function App() {
   return (
@@ -89,6 +91,16 @@ function App() {
         <Stack.Screen
           name="Terms"
           component={Terms}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="PhonNum"
+          component={PhonNum}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Name"
+          component={Name}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
