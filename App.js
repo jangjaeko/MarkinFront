@@ -18,6 +18,7 @@ import ChooseWay from './src/component/SignIn/ChooseWay/ChooseWay';
 import Terms from './src/component/SignIn/Terms/Terms';
 import PhonNum from './src/component/SignIn/PhonNum/PhonNum';
 import Name from './src/component/SignIn/Name/Name';
+import AgeChoose from './src/component/SignIn/AgeChoose/AgeChoose';
 const Stack = createStackNavigator();
 function App() {
   return (
@@ -101,6 +102,11 @@ function App() {
         <Stack.Screen
           name="Name"
           component={Name}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="AgeChoose"
+          component={AgeChoose}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

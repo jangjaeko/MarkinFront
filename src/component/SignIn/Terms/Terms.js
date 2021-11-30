@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     position: 'absolute',
     left: '5%',
-    top: 600,
+    top: 660,
     justifyContent: 'center',
   },
   btnText: {
