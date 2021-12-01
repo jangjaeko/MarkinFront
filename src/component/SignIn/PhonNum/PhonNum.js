@@ -94,13 +94,12 @@ export default function PhonNum(props) {
           ]}
         />
       </View>
-      <View>
-        <TouchableOpacity
-          style={styles.btnDesign}
-          onPress={() => props.navigation.navigate('Name')}>
-          <Text style={styles.btnText}>다음</Text>
-        </TouchableOpacity>
-      </View>
+
+      <TouchableOpacity
+        style={styles.btnDesign}
+        onPress={() => props.navigation.navigate('Name')}>
+        <Text style={styles.btnText}>다음</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -126,12 +125,12 @@ const styles = StyleSheet.create({
   },
   btnDesign: {
     backgroundColor: '#DEDEDE',
-    width: '90%',
+    width: '95%',
     height: 50,
     borderRadius: 10,
     position: 'absolute',
-
-    top: 300,
+    marginLeft: '5%',
+    top: 750,
     justifyContent: 'center',
   },
   btnText: {

@@ -45,13 +45,12 @@ export default function Name(props) {
           ]}
         />
       </View>
-      <View>
-        <TouchableOpacity
-          style={styles.btnDesign}
-          onPress={() => props.navigation.navigate('AgeChoose')}>
-          <Text style={styles.btnText}>다음</Text>
-        </TouchableOpacity>
-      </View>
+
+      <TouchableOpacity
+        style={styles.btnDesign}
+        onPress={() => props.navigation.navigate('AgeChoose')}>
+        <Text style={styles.btnText}>다음</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -77,11 +76,12 @@ const styles = StyleSheet.create({
   },
   btnDesign: {
     backgroundColor: 'black',
-    width: '90%',
+    width: '95%',
     height: 50,
     borderRadius: 10,
     position: 'absolute',
-    top: 500,
+    top: 750,
+    marginLeft: '5%',
     justifyContent: 'center',
   },
   btnText: {

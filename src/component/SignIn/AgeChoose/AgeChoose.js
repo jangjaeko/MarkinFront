@@ -33,19 +33,18 @@ export default function AgeChoose(props) {
       {/* Age button */}
       <AgeBut IsAge={IsAge} setIsAge={setIsAge} />
       {/* next button */}
-      <View>
-        {IsAge !== 0 && (Isboy || Isgirl) ? (
-          <TouchableOpacity
-            style={[styles.btnDesign, {backgroundColor: 'black'}]}
-            onPress={() => props.navigation.navigate('Address')}>
-            <Text style={styles.btnText}>다음</Text>
-          </TouchableOpacity>
-        ) : (
-          <View style={[styles.btnDesign, {backgroundColor: '#DEDEDE'}]}>
-            <Text style={styles.btnText}>다음</Text>
-          </View>
-        )}
-      </View>
+
+      {IsAge !== 0 && (Isboy || Isgirl) ? (
+        <TouchableOpacity
+          style={[styles.btnDesign, {backgroundColor: 'black'}]}
+          onPress={() => props.navigation.navigate('Address')}>
+          <Text style={styles.btnText}>다음</Text>
+        </TouchableOpacity>
+      ) : (
+        <View style={[styles.btnDesign, {backgroundColor: '#DEDEDE'}]}>
+          <Text style={styles.btnText}>다음</Text>
+        </View>
+      )}
     </View>
   );
 }
@@ -63,7 +62,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 10,
     position: 'absolute',
-    top: 50,
+    top: 750,
     justifyContent: 'center',
     marginLeft: '5%',
   },

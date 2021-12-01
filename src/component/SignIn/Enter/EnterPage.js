@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     position: 'absolute',
     left: '5%',
-    top: 600,
+    top: 650,
     justifyContent: 'center',
   },
   btnText: {

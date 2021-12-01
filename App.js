@@ -20,6 +20,7 @@ import PhonNum from './src/component/SignIn/PhonNum/PhonNum';
 import Name from './src/component/SignIn/Name/Name';
 import AgeChoose from './src/component/SignIn/AgeChoose/AgeChoose';
 import Address from './src/component/SignIn/Address/Address';
+import Category from './src/component/SignIn/Category/Category';
 const Stack = createStackNavigator();
 function App() {
   return (
@@ -113,6 +114,11 @@ function App() {
         <Stack.Screen
           name="Address"
           component={Address}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Category"
+          component={Category}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

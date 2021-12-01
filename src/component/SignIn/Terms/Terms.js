@@ -39,13 +39,12 @@ export default function Terms(props) {
         </View>
         <View style={styles.TermsLet}></View>
       </View>
-      <View>
-        <TouchableOpacity
-          style={styles.btnDesign}
-          onPress={() => props.navigation.navigate('PhonNum')}>
-          <Text style={styles.btnText}>다음으로</Text>
-        </TouchableOpacity>
-      </View>
+
+      <TouchableOpacity
+        style={styles.btnDesign}
+        onPress={() => props.navigation.navigate('PhonNum')}>
+        <Text style={styles.btnText}>다음으로</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -94,7 +93,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     position: 'absolute',
     left: '5%',
-    top: 660,
+    top: 750,
     justifyContent: 'center',
   },
   btnText: {
