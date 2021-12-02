@@ -84,52 +84,17 @@ export default function RList() {
               marginLeft: '5%',
             }}>
             <View style={{width: 30}}>
-              <Text
-                style={{
-                  textAlign: 'center',
-                  fontSize: 15,
-                  fontFamily: 'Roboto-Medium',
-                }}>
-                {item.key}{' '}
-              </Text>
+              <Text style={styles.rankText}>{item.key}</Text>
             </View>
-            <View
-              style={{
-                width: 150,
-                flexDirection: 'row',
-                marginLeft: 20,
-              }}>
-              <Image
-                source={item.pImage}
-                style={{
-                  width: 30,
-                  height: 30,
-                  borderRadius: 30 / 2,
-                  marginTop: -5,
-                }}
-              />
+            <View style={styles.idSpace}>
+              <Image source={item.pImage} style={styles.pImagest} />
               <Text style={{marginLeft: 8, fontSize: 15}}>{item.id} </Text>
             </View>
             <View style={{width: 70}}>
-              <Text
-                style={{
-                  fontSize: 15,
-                  color: '#7553FF',
-                  fontFamily: 'NotoSansKR-Regular',
-                  textAlign: 'right',
-                }}>
-                {item.realFollower} k{' '}
-              </Text>
+              <Text style={styles.realFollowerText}>{item.realFollower} k</Text>
             </View>
             <View style={{width: 75}}>
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontFamily: 'NotoSansKR-Regular',
-                  textAlign: 'right',
-                }}>
-                {item.Follower} k{' '}
-              </Text>
+              <Text style={styles.followerText}>{item.Follower} k</Text>
             </View>
           </View>
         </View>
@@ -153,5 +118,32 @@ const styles = StyleSheet.create({
     elevation: 6,
     justifyContent: 'center',
     marginBottom: 3,
+  },
+  followerText: {
+    fontSize: 15,
+    fontFamily: 'NotoSansKR-Regular',
+    textAlign: 'right',
+  },
+  realFollowerText: {
+    fontSize: 15,
+    color: '#7553FF',
+    fontFamily: 'NotoSansKR-Regular',
+    textAlign: 'right',
+  },
+  pImagest: {
+    width: 30,
+    height: 30,
+    borderRadius: 30 / 2,
+    marginTop: -5,
+  },
+  rankText: {
+    textAlign: 'center',
+    fontSize: 15,
+    fontFamily: 'Roboto-Medium',
+  },
+  idSpace: {
+    width: 150,
+    flexDirection: 'row',
+    marginLeft: 20,
   },
 });

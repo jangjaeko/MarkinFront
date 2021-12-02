@@ -6,22 +6,23 @@ import {
   Text,
   ScrollView,
   StyleSheet,
-  Touchable,
+  TextInput,
 } from 'react-native';
 import filter from '../../../../icons/filter.png';
 import CategoryModal from './modals/CatFolModal/CategoryModal';
 import FollowerModal from './modals/FolNumModal/FollwerModal';
 import RList from './RList';
 import RTiltle from './RTiltle';
+import Icons from '../../../Icons/Icons';
 export default function RankList() {
   const [myWidth, setmyWidth] = useState(null);
   const [CatModalVis, setCatModalVis] = useState(false);
   const [FNumModalVis, setFNumModalVis] = useState(false);
   const [showCorF, setshowCorF] = useState(false);
   const [Sort, setSort] = useState(1);
-  const onLayout = event => {
-    const {width} = event.nativeEvent.layout;
-    setmyWidth(width);
+  const [isSearch, setisSearch] = useState('');
+  const handleSearch = event => {
+    setisSearch(event);
   };
   const handleCatModlaVisable = () => {
     setshowCorF(false);
@@ -39,6 +40,30 @@ export default function RankList() {
   };
   return (
     <View>
+      <View style={{flexDirection: 'row'}}>
+        <TouchableOpacity style={{zIndex: 10}}>
+          <Icons.Feather
+            name="search"
+            size={20}
+            color="#111"
+            style={{
+              top: 30,
+              left: 20,
+              opacity: 0.5,
+              position: 'absolute',
+            }}
+          />
+        </TouchableOpacity>
+        <TextInput
+          value={isSearch}
+          autoCapitalize={'none'}
+          autoCorrect={false}
+          placeholder="검색어를 입력하세요"
+          onChangeText={handleSearch}
+          style={styles.input}
+        />
+      </View>
+
       <View style={{flexDirection: 'row', marginTop: 30}}>
         <TouchableOpacity
           style={styles.greyBtn}
@@ -112,7 +137,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: 10,
+    marginLeft: 20,
     opacity: 0.5,
   },
   greyBtn2: {
@@ -135,7 +160,23 @@ const styles = StyleSheet.create({
   },
   followerSoon: {
     fontSize: 12,
-    marginLeft: 10,
+    marginLeft: 0,
     fontFamily: 'NotoSansKR-Regular',
+  },
+  input: {
+    width: '90%',
+    height: 56,
+    backgroundColor: 'white',
+    marginTop: 10,
+    borderColor: 'black',
+    borderBottomWidth: 1,
+    justifyContent: 'center',
+    lineHeight: 20,
+    textAlign: 'left',
+    marginLeft: '5%',
+    paddingLeft: 30,
+    fontFamily: 'NotoSansKR-Regular',
+    lineHeight: 30,
+    fontSize: 16,
   },
 });

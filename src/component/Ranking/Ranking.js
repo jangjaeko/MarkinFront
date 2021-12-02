@@ -13,9 +13,7 @@ export default function Ranking(props) {
       <View style={styles.HeaderStyle}>
         <RankingHeader navigateToMain={navigateToMain} />
       </View>
-      {/* <View style={{width: '90%', marginLeft: '5%'}}>
-        <Search />
-      </View> */}
+      <View style={{width: '90%', marginLeft: '5%'}}></View>
       <View style={{width: '100%'}}>
         <RankList />
       </View>
@@ -51,5 +49,19 @@ const styles = StyleSheet.create({
     borderTopColor: 'rgb(212, 212, 212)',
     position: 'absolute',
     bottom: 0,
+  },
+  input: {
+    width: '90%',
+    height: 56,
+    backgroundColor: 'white',
+    marginTop: 10,
+    borderColor: 'black',
+    borderBottomWidth: 1,
+    justifyContent: 'center',
+    lineHeight: 20,
+    textAlign: 'left',
+    marginLeft: '0%',
+    paddingLeft: 30,
+    fontFamily: 'NotoSansKR-Regular',
   },
 });
