@@ -23,7 +23,7 @@ export default function MainFooter(props) {
         </TouchableOpacity>
         <TouchableOpacity style={styles.unfocusSpace}>
           <Image source={campaign} style={{width: 20, height: 20}} />
-          <Text style={styles.underText}>Campaign</Text>
+          <Text style={styles.underText}>Activity</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.unfocusSpace}>

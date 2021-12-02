@@ -24,7 +24,7 @@ export default function CampaignFooter() {
 
         <TouchableOpacity style={styles.focusSpace}>
           <Image source={campaign} style={{width: 20, height: 20}} />
-          <Text style={styles.focusText}>Campaign</Text>
+          <Text style={styles.focusText}>Activity</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.unfocusSpace}>
