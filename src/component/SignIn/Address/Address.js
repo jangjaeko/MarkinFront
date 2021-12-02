@@ -6,26 +6,65 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
-
+import Icons from '../../Icons/Icons';
 export default function Address(props) {
   const [DetailAd, setDetailAd] = useState('');
+  const [SendAddress, setSendAddress] = useState('');
+  const onChangeSendInput = event => {
+    setSendAddress(event);
+  };
   const onChangeInput = event => {
     setDetailAd(event);
   };
   return (
     <View style={styles.allView}>
-      <Text>Address</Text>
-      <Text style={{fontfamily: 'NotoSansKR-Bold'}}>배송 주소</Text>
-      <View style={{flexDirection: 'row'}}>
-        <TextInput />
-        <TouchableOpacity style={{backgroundColor: '#DEDEDE', borderRadius: 3}}>
-          <Text style={{fontFamily: 'NotoSansKR-Regular', color: 'white'}}>
+      <TouchableOpacity
+        style={{zIndex: 10}}
+        onPress={() => props.navigation.goBack()}>
+        <Icons.Entypo
+          name="chevron-thin-left"
+          size={20}
+          color="black"
+          style={{left: -5, top: 10}}
+        />
+      </TouchableOpacity>
+      <View style={{marginTop: 40}}>
+        <Text style={{fontFamily: 'Roboto-Bold', fontSize: 28}}>
+          협찬상품 수령을 위해 {'\n'}주소를 입력해주세요
+        </Text>
+      </View>
+      {/* 주소 입력  */}
+      <Text
+        style={{fontFamily: 'NotoSansKR-Bold', marginTop: 80, fontSize: 16}}>
+        배송 주소
+      </Text>
+      <View style={{flexDirection: 'row', marginTop: 10}}>
+        <TextInput
+          placeholder="도로명,건물명 또는 지번으로 검색"
+          autoCapitalize={'none'}
+          autoCorrect={false}
+          value={SendAddress}
+          onChangeText={onChangeSendInput}
+          //   onEndEditing={() => setisborderColor2(1)}
+          style={[
+            {
+              width: '60%',
+              borderColor: '#DEDEDE',
+            },
+            styles.input,
+          ]}
+        />
+        <TouchableOpacity style={styles.addressBut}>
+          <Text style={{fontFamily: 'NotoSansKR-Bold', color: 'white'}}>
             주소 검색
           </Text>
         </TouchableOpacity>
       </View>
-      <Text style={{fontfamily: 'NotoSansKR-Bold'}}>상세주소 </Text>
-      <View>
+      <Text
+        style={{fontFamily: 'NotoSansKR-Bold', fontSize: 16, marginTop: 20}}>
+        상세주소
+      </Text>
+      <View style={{marginTop: 10}}>
         <TextInput
           placeholder="상세주소를 입력하세요."
           autoCapitalize={'none'}
@@ -85,5 +124,19 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     fontFamily: 'NotoSansKR-Regular',
     fontSize: 14,
+  },
+  addressBut: {
+    backgroundColor: '#DEDEDE',
+    borderRadius: 3,
+    justifyContent: 'center',
+    width: 88,
+    alignItems: 'center',
+    marginLeft: 20,
+    height: 50,
+    marginTop: -12,
+    shadowColor: '#dedede',
+    shadowOffset: {width: 2, height: 2},
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
   },
 });

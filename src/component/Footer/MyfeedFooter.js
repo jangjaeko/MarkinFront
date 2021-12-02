@@ -34,7 +34,7 @@ export default function MyfeedFooter(props) {
           //   onPress={() => props.navigateToMyFeed()}
           style={styles.focusSpace}>
           <Image source={myfeed} style={{width: 20, height: 20}} />
-          <Text style={styles.focusText}>Myfeed</Text>
+          <Text style={styles.focusText}>MyPage</Text>
         </TouchableOpacity>
       </View>
     </View>

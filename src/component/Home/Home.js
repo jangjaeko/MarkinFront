@@ -50,8 +50,8 @@ const Home = props => {
       <TouchableOpacity onPress={() => props.navigation.navigate('Message')}>
         <Text>Message</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => props.navigation.navigate('MyFeed')}>
-        <Text>myfeed</Text>
+      <TouchableOpacity onPress={() => props.navigation.navigate('MyPage')}>
+        <Text>MyPage</Text>
       </TouchableOpacity>
       <Icon name="instagram" size={30} color="#111" />
     </View>
