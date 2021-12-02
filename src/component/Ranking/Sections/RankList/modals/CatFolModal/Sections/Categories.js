@@ -12,13 +12,12 @@ export default function Categories() {
         <TouchableOpacity
           style={{
             marginLeft: '5%',
-            opacity: 0.5,
           }}
           onPress={() => handleCheck(0)}>
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[0] % 2 === 0 ? 'white' : '#545454'},
+              {backgroundColor: Selected[0] % 2 === 0 ? 'white' : '#7553FF'},
             ]}>
             <Text
               style={[
@@ -30,12 +29,12 @@ export default function Categories() {
           </View>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{marginLeft: 5, opacity: 0.5}}
+          style={{marginLeft: 5}}
           onPress={() => handleCheck(1)}>
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[1] % 2 === 0 ? 'white' : '#545454'},
+              {backgroundColor: Selected[1] % 2 === 0 ? 'white' : '#7553FF'},
             ]}>
             <Text
               style={[
@@ -47,12 +46,12 @@ export default function Categories() {
           </View>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{marginLeft: 5, opacity: 0.5}}
+          style={{marginLeft: 5}}
           onPress={() => handleCheck(2)}>
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[2] % 2 === 0 ? 'white' : '#545454'},
+              {backgroundColor: Selected[2] % 2 === 0 ? 'white' : '#7553FF'},
             ]}>
             <Text
               style={[
@@ -64,12 +63,12 @@ export default function Categories() {
           </View>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{marginLeft: 5, opacity: 0.5}}
+          style={{marginLeft: 5}}
           onPress={() => handleCheck(3)}>
           <View
             style={[
               styles.greyBtn5,
-              {backgroundColor: Selected[3] % 2 === 0 ? 'white' : '#545454'},
+              {backgroundColor: Selected[3] % 2 === 0 ? 'white' : '#7553FF'},
             ]}>
             <Text
               style={[
@@ -84,12 +83,12 @@ export default function Categories() {
       {/* 두번쨰줄 */}
       <View style={{flexDirection: 'row', marginTop: 20}}>
         <TouchableOpacity
-          style={{marginLeft: '5%', opacity: 0.5}}
+          style={{marginLeft: '5%'}}
           onPress={() => handleCheck(4)}>
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[4] % 2 === 0 ? 'white' : '#545454'},
+              {backgroundColor: Selected[4] % 2 === 0 ? 'white' : '#7553FF'},
             ]}>
             <Text
               style={[
@@ -101,12 +100,12 @@ export default function Categories() {
           </View>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{marginLeft: 5, opacity: 0.5}}
+          style={{marginLeft: 5}}
           onPress={() => handleCheck(5)}>
           <View
             style={[
               styles.greyBtn4,
-              {backgroundColor: Selected[5] % 2 === 0 ? 'white' : '#545454'},
+              {backgroundColor: Selected[5] % 2 === 0 ? 'white' : '#7553FF'},
             ]}>
             <Text
               style={[
@@ -118,12 +117,12 @@ export default function Categories() {
           </View>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{marginLeft: 5, opacity: 0.5}}
+          style={{marginLeft: 5}}
           onPress={() => handleCheck(6)}>
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[6] % 2 === 0 ? 'white' : '#545454'},
+              {backgroundColor: Selected[6] % 2 === 0 ? 'white' : '#7553FF'},
             ]}>
             <Text
               style={[
@@ -135,12 +134,12 @@ export default function Categories() {
           </View>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{marginLeft: 5, opacity: 0.5}}
+          style={{marginLeft: 5}}
           onPress={() => handleCheck(7)}>
           <View
             style={[
               styles.greyBtn,
-              {backgroundColor: Selected[7] % 2 === 0 ? 'white' : '#545454'},
+              {backgroundColor: Selected[7] % 2 === 0 ? 'white' : '#7553FF'},
             ]}>
             <Text
               style={[
@@ -158,7 +157,7 @@ export default function Categories() {
 
 const styles = StyleSheet.create({
   greyBtn: {
-    borderWidth: 0.3,
+    borderWidth: 1,
     borderColor: 'black',
     height: 35,
     width: 55,
@@ -169,7 +168,7 @@ const styles = StyleSheet.create({
   },
   greyBtn5: {
     backgroundColor: 'white',
-    borderWidth: 0.3,
+    borderWidth: 1,
     borderColor: 'black',
     height: 35,
     width: 120,
@@ -180,7 +179,7 @@ const styles = StyleSheet.create({
   },
   greyBtn4: {
     backgroundColor: 'white',
-    borderWidth: 0.3,
+    borderWidth: 1,
     borderColor: 'black',
     height: 35,
     width: 90,
@@ -191,6 +190,6 @@ const styles = StyleSheet.create({
   },
   inText: {
     fontSize: 15,
-    fontFamily: 'Roboto-Light',
+    fontFamily: 'NotoSansKR-Bold',
   },
 });

@@ -22,15 +22,15 @@ export default function RTiltle() {
       <Text
         style={{
           fontSize: 15,
-          marginLeft: 85,
+          marginLeft: 80,
           fontFamily: 'NotoSansKR-Medium',
         }}>
-        실팔로워
+        진짜 영항력
       </Text>
       <Text
         style={{
           fontSize: 15,
-          marginLeft: 30,
+          marginLeft: 15,
           fontFamily: 'NotoSansKR-Medium',
         }}>
         팔로워

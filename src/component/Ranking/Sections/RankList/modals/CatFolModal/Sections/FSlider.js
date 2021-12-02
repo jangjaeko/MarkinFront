@@ -12,7 +12,7 @@ export default function FSlider() {
         isMarkersSeparated={true}
         markerStyle={styles.markst}
         selectedStyle={{
-          backgroundColor: '#FD780F',
+          backgroundColor: '#7553FF',
         }}
         trackStyle={{
           backgroundColor: '#F1F1F1',

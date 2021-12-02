@@ -114,7 +114,7 @@ export default function RList() {
               <Text
                 style={{
                   fontSize: 15,
-                  color: '#FD780F',
+                  color: '#7553FF',
                   fontFamily: 'NotoSansKR-Regular',
                   textAlign: 'right',
                 }}>
