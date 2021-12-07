@@ -7,7 +7,7 @@ export default function ActivityHome() {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={{marginBottom: '80%', paddingLeft: '5%'}}>
-        <View>
+        <View style={{marginTop: 50}}>
           <ForMe />
         </View>
 

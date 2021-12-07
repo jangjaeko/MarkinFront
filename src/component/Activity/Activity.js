@@ -1,15 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import ActivityHome from './ActivityHome/ActivityHome';
 import ActivityFooter from '../Footer/ActivityFooter';
-export default function Activity(porps) {
+import ActivityHeader from './AvtivityHeader/ActivityHeader';
+import ActivityAll from './ActivityAll/ActivityAll';
+export default function Activity(props) {
+  const navigateToMain = () => {
+    props.navigation.navigate('Main');
+  };
+  const navigateToSearch = () => {
+    props.navigation.navigate('Search');
+  };
+  const navigateToAlarm = () => {
+    props.navigation.navigate('Alarm');
+  };
+  const navigateToMessage = () => {
+    props.navigation.navigate('Message');
+  };
+  const [StateChange, setStateChange] = useState(1);
   return (
     <View style={styles.allView}>
-      <View style={{width: '100%', height: 100}}></View>
-
-      <View>
-        <ActivityHome />
+      <View style={styles.HeaderStyle}>
+        <ActivityHeader
+          StateChange={StateChange}
+          setStateChange={setStateChange}
+          navigateToAlarm={navigateToAlarm}
+          navigateToMessage={navigateToMessage}
+          navigateToSearch={navigateToSearch}
+        />
       </View>
+      {StateChange === 1 && (
+        <View>
+          <ActivityHome />
+        </View>
+      )}
+      {StateChange === 2 && (
+        <View>
+          <ActivityAll />
+        </View>
+      )}
       <View style={styles.FooterStyle}>
         <ActivityFooter />
       </View>
@@ -31,5 +60,12 @@ const styles = StyleSheet.create({
     borderTopColor: 'rgb(212, 212, 212)',
     position: 'absolute',
     bottom: 0,
+  },
+  HeaderStyle: {
+    width: '100%',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgb(212, 212, 212)',
   },
 });
