@@ -1,10 +1,13 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {ScrollView, View, Text} from 'react-native';
 
+import Cards from './Sections/Cards';
 export default function ActivityAll() {
   return (
-    <View>
-      <Text>ㄴㅇ랴ㅐㄴ어래ㅑ너래ㅑ너ㅐ</Text>
-    </View>
+    <ScrollView>
+      <View style={{marginBottom: '60%'}}>
+        <Cards />
+      </View>
+    </ScrollView>
   );
 }

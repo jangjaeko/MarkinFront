@@ -48,23 +48,23 @@ export default function ActivityHeader(props) {
 
       <View style={{flexDirection: 'row', width: '100%', paddingTop: 10}}>
         <TouchableOpacity onPress={handlefocusHome}>
-          {props.stateChange === 1 ? (
+          {props.StateChange === 1 ? (
             <View style={styles.focusView}>
               <Text style={styles.focusText}>홈</Text>
             </View>
           ) : (
-            <View style={{height: 50, justifyContent: 'center', width: 190}}>
+            <View style={styles.unsfocusView}>
               <Text style={styles.greyText}>홈</Text>
             </View>
           )}
         </TouchableOpacity>
         <TouchableOpacity onPress={handlefocusALL}>
-          {props.stateChange === 2 ? (
+          {props.StateChange === 2 ? (
             <View style={styles.focusView}>
               <Text style={styles.focusText}>전체활동</Text>
             </View>
           ) : (
-            <View style={{height: 50, justifyContent: 'center', width: 190}}>
+            <View style={styles.unsfocusView}>
               <Text style={styles.greyText}>전체활동</Text>
             </View>
           )}
@@ -87,10 +87,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   focusView: {
-    width: 130,
+    width: 195,
     height: 50,
     justifyContent: 'center',
     borderBottomColor: 'black',
+    borderBottomWidth: 1,
+  },
+  unsfocusView: {
+    width: 195,
+    height: 50,
+    justifyContent: 'center',
+    borderBottomColor: '#E5E5E5',
     borderBottomWidth: 1,
   },
   focusText: {
