@@ -13,79 +13,100 @@ export default function MainHeader(props) {
     props.setstateChange(3);
   };
   return (
-    <>
-      <View style={{marginTop: -20}}>
+    <View style={{width: '100%'}}>
+      <View style={{paddingTop: 60, flexDirection: 'row'}}>
         <TouchableOpacity
           onPress={() => props.navigateToSearch()}
-          style={{width: 20, height: 20}}>
+          style={{flex: 1}}>
           <Icons.Feather
             name="search"
             size={20}
             color="#111"
-            style={{position: 'absolute', left: 30, top: 0}}
+            style={{left: 30, top: 0}}
           />
         </TouchableOpacity>
-        <Text style={styles.Logo}>MARKIN</Text>
-        <TouchableOpacity
-          onPress={() => props.navigateToAlarm()}
-          style={{position: 'absolute', right: 60, top: 0}}>
-          <Icons.Feather name="bell" size={20} color="#111" />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => props.navigateToMessage()}
-          style={{position: 'absolute', right: 26, top: 0}}>
-          <Icons.Ionicons
-            name="md-paper-plane-outline"
-            size={20}
-            color="#111"
-          />
-        </TouchableOpacity>
+        <View style={{flex: 1}}>
+          <Text style={styles.Logo}>MARKIN</Text>
+        </View>
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <TouchableOpacity
+            onPress={() => props.navigateToAlarm()}
+            style={{paddingLeft: 50}}>
+            <Icons.Feather name="bell" size={20} color="#111" />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => props.navigateToMessage()}
+            style={{marginLeft: 15}}>
+            <Icons.Ionicons
+              name="md-paper-plane-outline"
+              size={20}
+              color="#111"
+            />
+          </TouchableOpacity>
+        </View>
       </View>
 
-      <View>
+      <View style={{flexDirection: 'row', width: '100%', paddingTop: 30}}>
         <TouchableOpacity onPress={handlefocusHome}>
           {props.stateChange === 1 ? (
-            <Text style={{position: 'absolute', left: 75, top: 35}}>Home</Text>
+            <View style={styles.focusView}>
+              <Text style={styles.focusText}>홈</Text>
+            </View>
           ) : (
-            <Text
-              style={{position: 'absolute', left: 75, top: 35, opacity: 0.5}}>
-              Home
-            </Text>
+            <View style={{width: 130, height: 50, justifyContent: 'center'}}>
+              <Text style={styles.greyText}>홈</Text>
+            </View>
           )}
         </TouchableOpacity>
         <TouchableOpacity onPress={handlefocusFeed}>
           {props.stateChange === 2 ? (
-            <Text style={{position: 'absolute', left: 178, top: 35}}>Feed</Text>
+            <View style={styles.focusView}>
+              <Text style={styles.focusText}>피드</Text>
+            </View>
           ) : (
-            <Text
-              style={{position: 'absolute', left: 178, top: 35, opacity: 0.5}}>
-              Feed
-            </Text>
+            <View style={{width: 130, height: 50, justifyContent: 'center'}}>
+              <Text style={styles.greyText}>피드</Text>
+            </View>
           )}
         </TouchableOpacity>
         <TouchableOpacity onPress={handlefocusRanking}>
           {props.stateChange === 3 ? (
-            <Text style={{position: 'absolute', right: 59, top: 35}}>
-              Ranking
-            </Text>
+            <View style={styles.focusView}>
+              <Text style={styles.focusText}>랭킹</Text>
+            </View>
           ) : (
-            <Text
-              style={{position: 'absolute', right: 59, top: 35, opacity: 0.5}}>
-              Ranking
-            </Text>
+            <View style={{width: 130, height: 50, justifyContent: 'center'}}>
+              <Text style={styles.greyText}>랭킹</Text>
+            </View>
           )}
         </TouchableOpacity>
       </View>
-    </>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   Logo: {
     textAlign: 'center',
-    position: 'absolute',
     top: 0,
-    left: '50%',
-    transform: [{translateX: -27}, {translateY: 0}],
+    transform: [{translateX: 0}, {translateY: 0}],
+  },
+  greyText: {
+    opacity: 0.5,
+    textAlign: 'center',
+    fontFamily: 'NotoSansKR-Regular',
+    fontSize: 16,
+  },
+  focusView: {
+    width: 130,
+    height: 50,
+    justifyContent: 'center',
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+  },
+  focusText: {
+    textAlign: 'center',
+    fontFamily: 'NotoSansKR-Bold',
+    fontSize: 16,
   },
 });

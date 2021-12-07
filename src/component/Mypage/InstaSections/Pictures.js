@@ -59,6 +59,7 @@ export default function Pictures() {
                 borderWidth: 1,
                 borderColor: '#EBEBEC',
                 aspectRatio: 1,
+                //가로 세로 비율
               }}></View>
             <View
               style={{

@@ -87,7 +87,6 @@ export default function Main(props) {
 
 const styles = StyleSheet.create({
   HeaderStyle: {
-    height: 140,
     width: '100%',
     backgroundColor: 'white',
     justifyContent: 'center',
