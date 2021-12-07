@@ -32,6 +32,9 @@ export default function Main(props) {
   const navigateToMessage = () => {
     props.navigation.navigate('Message');
   };
+  const navigateToActivity = () => {
+    props.navigation.navigate('Activity');
+  };
 
   const [stateChange, setstateChange] = useState(1);
 
@@ -79,6 +82,7 @@ export default function Main(props) {
         <MainFooter
           navigateToMyPage={navigateToMyPage}
           navigateToMain={navigateToMain}
+          navigateToActivity={navigateToActivity}
         />
       </View>
     </View>

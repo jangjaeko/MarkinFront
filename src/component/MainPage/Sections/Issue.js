@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import issue1 from '../../../images/issue1.png';
-import issue2 from '.././../../images/issue2.png';
+import issue2 from '../../../images/issue2.png';
 export default function Issue() {
   return (
     <ScrollView

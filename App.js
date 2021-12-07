@@ -21,6 +21,7 @@ import Name from './src/component/SignIn/Name/Name';
 import AgeChoose from './src/component/SignIn/AgeChoose/AgeChoose';
 import Address from './src/component/SignIn/Address/Address';
 import Category from './src/component/SignIn/Category/Category';
+import Activity from './src/component/Activity/Activity';
 const Stack = createStackNavigator();
 function App() {
   return (
@@ -119,6 +120,11 @@ function App() {
         <Stack.Screen
           name="Category"
           component={Category}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Activity"
+          component={Activity}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

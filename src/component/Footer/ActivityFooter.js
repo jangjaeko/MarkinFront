@@ -6,7 +6,7 @@ import home from '../../icons/home.png';
 import managers from '../../icons/managers.png';
 import myfeed from '../../icons/myfeed.png';
 
-export default function CampaignFooter() {
+export default function ActivityFooter() {
   return (
     <View style={{height: 80}}>
       <View style={{flexDirection: 'row'}}>
