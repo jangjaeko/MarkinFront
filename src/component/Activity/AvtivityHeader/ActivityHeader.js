@@ -15,7 +15,7 @@ export default function ActivityHeader(props) {
   return (
     <View style={{width: '100%'}}>
       <View style={{paddingTop: 10, flexDirection: 'row'}}>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           onPress={() => props.navigateToSearch()}
           style={{flex: 1}}>
           <Icons.Feather
@@ -24,17 +24,18 @@ export default function ActivityHeader(props) {
             color="#111"
             style={{left: 30, top: 0}}
           />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
+        <View style={{flex: 1}}></View>
         <View style={{flex: 1}}>
           <Text style={styles.Logo}>MARKIN</Text>
         </View>
         <View style={{flex: 1, flexDirection: 'row'}}>
           <TouchableOpacity
             onPress={() => props.navigateToAlarm()}
-            style={{paddingLeft: 50}}>
+            style={{paddingLeft: 80}}>
             <Icons.Feather name="bell" size={20} color="#111" />
           </TouchableOpacity>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             onPress={() => props.navigateToMessage()}
             style={{marginLeft: 15}}>
             <Icons.Ionicons
@@ -42,7 +43,7 @@ export default function ActivityHeader(props) {
               size={20}
               color="#111"
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </View>
 
