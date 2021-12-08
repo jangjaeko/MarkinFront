@@ -9,6 +9,9 @@ export default function MyPage(props) {
   const navigateToMain = () => {
     props.navigation.navigate('Main');
   };
+  const navigateToActivity = () => {
+    props.navigation.navigate('Activity');
+  };
   return (
     <View style={{height: '100%', backgroundColor: 'white'}}>
       <View style={styles.HeaderStyle}>
@@ -28,7 +31,10 @@ export default function MyPage(props) {
       </View>
 
       <View style={styles.FooterStyle}>
-        <MyfeedFooter navigateToMain={navigateToMain} />
+        <MyfeedFooter
+          navigateToMain={navigateToMain}
+          navigateToActivity={navigateToActivity}
+        />
       </View>
     </View>
   );

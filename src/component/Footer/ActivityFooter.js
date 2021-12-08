@@ -6,12 +6,12 @@ import home from '../../icons/home.png';
 import managers from '../../icons/managers.png';
 import myfeed from '../../icons/myfeed.png';
 
-export default function ActivityFooter() {
+export default function ActivityFooter(props) {
   return (
     <View style={{height: 80}}>
       <View style={{flexDirection: 'row'}}>
         <TouchableOpacity
-          // onPress={() => props.navigateToMain()}
+          onPress={() => props.navigateToMain()}
           style={styles.unfocusSpace}>
           <Image source={home} style={{width: 20, height: 20}} />
           <Text style={styles.underText}>Home</Text>

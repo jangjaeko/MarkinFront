@@ -40,7 +40,7 @@ export default function Activity(props) {
         </View>
       )}
       <View style={styles.FooterStyle}>
-        <ActivityFooter />
+        <ActivityFooter navigateToMain={navigateToMain} />
       </View>
     </View>
   );

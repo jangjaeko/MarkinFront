@@ -21,7 +21,9 @@ export default function MyfeedFooter(props) {
           <Image source={managers} style={{width: 20, height: 20}} />
           <Text style={styles.underText}>Manager</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.unfocusSpace}>
+        <TouchableOpacity
+          style={styles.unfocusSpace}
+          onPress={() => props.navigateToActivity()}>
           <Image source={campaign} style={{width: 20, height: 20}} />
           <Text style={styles.underText}>Activity</Text>
         </TouchableOpacity>
