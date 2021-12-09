@@ -6,9 +6,18 @@ export default function ChooseWay(props) {
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       <View style={{position: 'absolute', top: 200, marginLeft: '5%'}}>
-        <Text style={{fontFamily: 'Roboto-Bold', fontSize: 24}}>MARKIN의</Text>
-        <Text style={{fontFamily: 'Roboto-Bold', fontSize: 24, marginTop: 8}}>
-          특별한 관리를 받으세요
+        <Text
+          style={{fontFamily: 'Roboto-Bold', fontSize: 26, letterSpacing: 3}}>
+          MARKIN의
+        </Text>
+        <Text
+          style={{
+            fontFamily: 'Roboto-Bold',
+            fontSize: 26,
+            marginTop: 8,
+            letterSpacing: 2,
+          }}>
+          특별한 관리를 받으세요!
         </Text>
         <Text
           style={{
@@ -16,8 +25,9 @@ export default function ChooseWay(props) {
             fontSize: 14,
             color: '#676767',
             marginTop: 8,
+            letterSpacing: 2,
           }}>
-          당신의 특별한 하루를 마킨과 함께하세요
+          당신의 특별한 하루를 마킨과 함께하세요.
         </Text>
       </View>
       <View style={styles.btnView}>
@@ -57,20 +67,6 @@ export default function ChooseWay(props) {
         <TouchableOpacity
           onPress={() => props.navigation.navigate('Terms')}
           style={[
-            {justifyContent: 'center', backgroundColor: 'white'},
-            styles.btnDesign,
-          ]}>
-          <Icon
-            name="mail"
-            size={30}
-            color="black"
-            style={{top: 10, left: 32, position: 'absolute'}}
-          />
-          <Text style={[styles.btnText, {color: 'black'}]}>Email로 로그인</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('Terms')}
-          style={[
             {justifyContent: 'center', backgroundColor: 'black'},
             styles.btnDesign,
           ]}>
@@ -86,8 +82,22 @@ export default function ChooseWay(props) {
           />
           <Text style={[styles.btnText, {color: 'white'}]}>Apple로 로그인</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate('Terms')}
+          style={[
+            {justifyContent: 'center', backgroundColor: 'white'},
+            styles.btnDesign,
+          ]}>
+          <Icon
+            name="mail"
+            size={30}
+            color="black"
+            style={{top: 10, left: 32, position: 'absolute'}}
+          />
+          <Text style={[styles.btnText, {color: 'black'}]}>Email로 로그인</Text>
+        </TouchableOpacity>
       </View>
-      <View
+      {/* <View
         style={{
           position: 'absolute',
           top: 760,
@@ -106,7 +116,7 @@ export default function ChooseWay(props) {
             로그인하기
           </Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </View>
   );
 }
@@ -114,7 +124,7 @@ export default function ChooseWay(props) {
 const styles = StyleSheet.create({
   btnView: {
     position: 'absolute',
-    top: 430,
+    top: 500,
     marginLeft: '5%',
     width: '90%',
   },

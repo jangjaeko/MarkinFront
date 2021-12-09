@@ -53,6 +53,11 @@ const Home = props => {
       <TouchableOpacity onPress={() => props.navigation.navigate('MyPage')}>
         <Text>MyPage</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => props.navigation.navigate('ChooseWay')}>
+        <Text>Sign in</Text>
+      </TouchableOpacity>
+
       <Icon name="instagram" size={30} color="#111" />
     </View>
   );
