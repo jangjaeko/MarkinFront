@@ -5,7 +5,40 @@ import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import Icons from '../../Icons/Icons';
 
 export default function Terms(props) {
-  const [isSelected, setisSelected] = useState(false);
+  const [Must, setMust] = useState(false);
+  const [Choose, setChoose] = useState(false);
+  const [IsAll, setIsAll] = useState(false);
+  const [IsMarketing, setIsMarketing] = useState(false);
+  const [sns, setsns] = useState(false);
+  const [email, setEmail] = useState(false);
+  const onAllAgree = () => {
+    if (IsAll === true) {
+      setIsAll(false);
+      setMust(false);
+      setChoose(false);
+      setIsMarketing(false);
+      setsns(false);
+      setEmail(false);
+    } else {
+      setIsAll(true);
+      setMust(true);
+      setChoose(true);
+      setIsMarketing(true);
+      setsns(true);
+      setEmail(true);
+    }
+  };
+  const onMarketingAgree = () => {
+    if (IsMarketing === true) {
+      setIsMarketing(false);
+      setsns(false);
+      setEmail(false);
+    } else {
+      setIsMarketing(true);
+      setsns(true);
+      setEmail(true);
+    }
+  };
   return (
     <View style={{flex: 1, backgroundColor: 'white', paddingTop: '15%'}}>
       <View style={{position: 'absolute', width: '90%', left: '5%', top: 150}}>
@@ -17,84 +50,77 @@ export default function Terms(props) {
       </View>
       <View style={styles.btnView}>
         <View style={styles.btnDes}>
-          <BouncyCheckbox
-            size={30}
-            fillColor="black"
-            unfillColor="#E5E5E5"
-            iconStyle={{borderColor: '#E5E5E5'}}
-            onPress={() => setisSelected(!isSelected)}
-            style={{paddingBottom: 10}}
-          />
+          <TouchableOpacity
+            style={[
+              IsAll === true ? styles.ClickCheckbtn : styles.unClickcheckbtn,
+            ]}
+            onPress={onAllAgree}>
+            <Icons.Entypo name="check" size={18} style={{color: '#DEDEDE'}} />
+          </TouchableOpacity>
           <Text style={styles.innerText}>전체동의</Text>
         </View>
-        <View style={{flexDirection: 'row', paddingLeft: 10, marginTop: 20}}>
-          <BouncyCheckbox
-            size={30}
-            fillColor="black"
-            unfillColor="#E5E5E5"
-            iconStyle={{borderColor: '#E5E5E5'}}
-            onPress={() => setisSelected(!isSelected)}
-            style={{paddingBottom: 10}}
-          />
+        <View style={styles.checkView}>
+          <TouchableOpacity
+            style={[
+              Must === true ? styles.ClickCheckbtn : styles.unClickcheckbtn,
+            ]}
+            onPress={() => setMust(!Must)}>
+            <Icons.Entypo name="check" size={18} style={{color: '#DEDEDE'}} />
+          </TouchableOpacity>
           <Text style={styles.innerText}>(필수)서비스 이용약관</Text>
         </View>
         <View style={styles.TermsLet}></View>
-        <View style={{flexDirection: 'row', paddingLeft: 10, marginTop: 20}}>
-          <BouncyCheckbox
-            size={30}
-            fillColor="black"
-            unfillColor="#E5E5E5"
-            iconStyle={{borderColor: '#E5E5E5'}}
-            onPress={() => setisSelected(!isSelected)}
-            style={{paddingBottom: 10}}
-          />
+        <View style={styles.checkView}>
+          <TouchableOpacity
+            style={[
+              Choose === true ? styles.ClickCheckbtn : styles.unClickcheckbtn,
+            ]}
+            onPress={() => setChoose(!Choose)}>
+            <Icons.Entypo name="check" size={18} style={{color: '#DEDEDE'}} />
+          </TouchableOpacity>
           <Text style={styles.innerText}>(선택)서비스 이용약관</Text>
         </View>
         <View style={styles.TermsLet}></View>
         <View style={{flexDirection: 'row', paddingLeft: 10, marginTop: 20}}>
-          <BouncyCheckbox
-            size={30}
-            fillColor="black"
-            unfillColor="#E5E5E5"
-            iconStyle={{borderColor: '#E5E5E5'}}
-            onPress={() => setisSelected(!isSelected)}
-            style={{paddingBottom: 10}}
-          />
+          <TouchableOpacity
+            style={[
+              IsMarketing === true
+                ? styles.ClickCheckbtn
+                : styles.unClickcheckbtn,
+            ]}
+            onPress={onMarketingAgree}>
+            <Icons.Entypo name="check" size={18} style={{color: '#DEDEDE'}} />
+          </TouchableOpacity>
           <Text style={styles.innerText}>(선택) 홍보및 마케팅 이용에 동의</Text>
         </View>
         <View style={{flexDirection: 'row', paddingTop: 10}}>
-          <BouncyCheckbox
-            size={20}
-            fillColor="white"
-            unfillColor="#E5E5E5"
-            iconStyle={{borderColor: '#E5E5E5'}}
-            onPress={() => setisSelected(!isSelected)}
-            iconComponent={
-              <Icons.AntDesign name="check" color="black" size={15} />
-            }
-            style={{paddingBottom: 10, marginLeft: 50}}
-          />
+          <TouchableOpacity
+            style={[sns === true ? styles.issmallCheck : styles.smallCheck]}
+            onPress={() => setsns(!sns)}>
+            <Icons.Entypo name="check" size={12} style={{color: '#DEDEDE'}} />
+          </TouchableOpacity>
           <Text style={styles.smstext}>SMS</Text>
-          <BouncyCheckbox
-            size={20}
-            fillColor="white"
-            unfillColor="#E5E5E5"
-            iconStyle={{borderColor: '#E5E5E5'}}
-            iconComponent={
-              <Icons.AntDesign name="check" color="black" size={15} />
-            }
-            onPress={() => setisSelected(!isSelected)}
-            style={{paddingBottom: 10, marginLeft: 30}}
-          />
+          <TouchableOpacity
+            style={[email === true ? styles.issmallCheck : styles.smallCheck]}
+            onPress={() => setEmail(!email)}>
+            <Icons.Entypo name="check" size={12} style={{color: '#DEDEDE'}} />
+          </TouchableOpacity>
           <Text style={styles.smstext}>이메일</Text>
         </View>
       </View>
-
-      <TouchableOpacity
-        style={styles.btnDesign}
-        onPress={() => props.navigation.navigate('PhonNum')}>
-        <Text style={styles.btnText}>다음</Text>
-      </TouchableOpacity>
+      {Must === true ? (
+        <TouchableOpacity
+          style={styles.btnDesign}
+          onPress={() => props.navigation.navigate('PhonNum')}>
+          <Text style={styles.btnText}>다음</Text>
+        </TouchableOpacity>
+      ) : (
+        <View
+          style={styles.xbtnDesign}
+          onPress={() => props.navigation.navigate('PhonNum')}>
+          <Text style={styles.btnText}>다음</Text>
+        </View>
+      )}
     </View>
   );
 }
@@ -126,6 +152,7 @@ const styles = StyleSheet.create({
     shadowRadius: 1,
   },
   innerText: {
+    marginLeft: 15,
     paddingTop: 3,
     fontFamily: 'NotoSansKR-Medium',
     fontSize: 16,
@@ -146,6 +173,16 @@ const styles = StyleSheet.create({
     top: 750,
     justifyContent: 'center',
   },
+  xbtnDesign: {
+    backgroundColor: '#DEDEDE',
+    width: '90%',
+    height: 50,
+    borderRadius: 10,
+    position: 'absolute',
+    left: '5%',
+    top: 750,
+    justifyContent: 'center',
+  },
   btnText: {
     textAlign: 'center',
     color: 'white',
@@ -156,5 +193,54 @@ const styles = StyleSheet.create({
   smstext: {
     marginTop: -2,
     fontFamily: 'NotoSansKR-Medium',
+    marginLeft: 10,
+  },
+  unClickcheckbtn: {
+    width: 30,
+    height: 30,
+    borderRadius: 30 / 2,
+    borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: '#DEDEDE',
+    backgroundColor: 'white',
+  },
+  ClickCheckbtn: {
+    width: 30,
+    height: 30,
+    borderRadius: 30 / 2,
+    borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: 'black',
+    backgroundColor: 'black',
+  },
+  checkView: {
+    flexDirection: 'row',
+    paddingLeft: 10,
+    marginTop: 20,
+    marginBottom: 15,
+  },
+  smallCheck: {
+    marginLeft: 20,
+    width: 20,
+    height: 20,
+    borderRadius: 20 / 2,
+    borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: '#DEDEDE',
+    backgroundColor: 'white',
+  },
+  issmallCheck: {
+    marginLeft: 20,
+    width: 20,
+    height: 20,
+    borderRadius: 20 / 2,
+    borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: 'black',
+    backgroundColor: 'black',
   },
 });
