@@ -41,6 +41,16 @@ export default function Terms(props) {
   };
   return (
     <View style={{flex: 1, backgroundColor: 'white', paddingTop: '15%'}}>
+      <TouchableOpacity
+        style={{zIndex: 10, marginLeft: '5%'}}
+        onPress={() => props.navigation.goBack()}>
+        <Icons.Entypo
+          name="chevron-thin-left"
+          size={20}
+          color="black"
+          style={{left: -5, top: 10}}
+        />
+      </TouchableOpacity>
       <View style={{position: 'absolute', width: '90%', left: '5%', top: 150}}>
         <Text style={styles.TopText}>마킨에 오신걸 환영합니다 :)</Text>
         <View style={{flexDirection: 'row'}}>

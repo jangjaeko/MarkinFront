@@ -116,12 +116,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderBottomWidth: 1,
     justifyContent: 'center',
-    lineHeight: 20,
     textAlign: 'left',
     marginLeft: '0%',
-    paddingLeft: 10,
     fontFamily: 'NotoSansKR-Regular',
-    fontSize: 16,
+    fontSize: 14,
   },
   btnDesign: {
     backgroundColor: '#DEDEDE',
