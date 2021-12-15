@@ -14,6 +14,8 @@ import FollowerModal from './modals/FolNumModal/FollwerModal';
 import RList from './RList';
 import RTiltle from './RTiltle';
 import Icons from '../../../Icons/Icons';
+import Search from './Search/Search';
+import SearchResult from './Search/SearchResult';
 export default function RankList() {
   const [myWidth, setmyWidth] = useState(null);
   const [CatModalVis, setCatModalVis] = useState(false);
@@ -40,73 +42,64 @@ export default function RankList() {
   };
   return (
     <View>
-      <View style={{flexDirection: 'row'}}>
-        <TouchableOpacity style={{zIndex: 10}}>
-          <Icons.Feather
-            name="search"
-            size={20}
-            color="#111"
-            style={{
-              top: 30,
-              left: 20,
-              opacity: 0.5,
-              position: 'absolute',
-            }}
-          />
-        </TouchableOpacity>
-        <TextInput
-          value={isSearch}
-          autoCapitalize={'none'}
-          autoCorrect={false}
-          placeholder="검색어를 입력하세요"
-          onChangeText={handleSearch}
-          style={styles.input}
-        />
-      </View>
-
-      <View style={{flexDirection: 'row', marginTop: 30}}>
-        <TouchableOpacity
-          style={styles.greyBtn}
-          onPress={handleCatModlaVisable}>
-          <Text style={styles.greyBtnText}>카테고리</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.greyBtn2}
-          onPress={handleFolwModalVisable}>
-          <Text style={styles.greyBtnText}>팔로워수</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={{flexDirection: 'row', marginLeft: 150}}
-          onPress={handleFNumModalVisable}>
-          <View style={{opacity: 0.5, flexDirection: 'row'}}>
-            <Image
-              source={filter}
-              style={{width: 12, height: 12, marginTop: 5}}
-            />
-            <Text style={styles.followerSoon}>팔로워순</Text>
+      <Search
+        isSearch={isSearch}
+        setisSearch={setisSearch}
+        handleSearch={handleSearch}
+      />
+      {isSearch !== '' ? (
+        <View showsVerticalScrollIndicator={false}>
+          <SearchResult isSearch={isSearch} />
+        </View>
+      ) : (
+        <View>
+          <View style={{flexDirection: 'row', marginTop: 30}}>
+            <TouchableOpacity
+              style={styles.greyBtn}
+              onPress={handleCatModlaVisable}>
+              <Text style={styles.greyBtnText}>카테고리</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.greyBtn2}
+              onPress={handleFolwModalVisable}>
+              <Text style={styles.greyBtnText}>팔로워수</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{flexDirection: 'row', marginLeft: 150}}
+              onPress={handleFNumModalVisable}>
+              <View style={{opacity: 0.5, flexDirection: 'row'}}>
+                <Image
+                  source={filter}
+                  style={{width: 12, height: 12, marginTop: 5}}
+                />
+                <Text style={styles.followerSoon}>팔로워순</Text>
+              </View>
+            </TouchableOpacity>
           </View>
-        </TouchableOpacity>
-      </View>
-      <CategoryModal
-        CatModalVis={CatModalVis}
-        handleCatModlaVisable={handleCatModlaVisable}
-        showCorF={showCorF}
-        handleCorF={handleCorF}
-        setCatModalVis={setCatModalVis}
-      />
-      <FollowerModal
-        handleFNumModalVisable={handleFNumModalVisable}
-        setFNumModalVis={setFNumModalVis}
-        FNumModalVis={FNumModalVis}
-        Sort={Sort}
-        setSort={setSort}
-      />
-      {/* 순위 타이틀 */}
-      <RTiltle />
-      {/* 순위 리스트 */}
-      <ScrollView style={{marginTop: 20}} showsVerticalScrollIndicator={false}>
-        <RList />
-      </ScrollView>
+          <CategoryModal
+            CatModalVis={CatModalVis}
+            handleCatModlaVisable={handleCatModlaVisable}
+            showCorF={showCorF}
+            handleCorF={handleCorF}
+            setCatModalVis={setCatModalVis}
+          />
+          <FollowerModal
+            handleFNumModalVisable={handleFNumModalVisable}
+            setFNumModalVis={setFNumModalVis}
+            FNumModalVis={FNumModalVis}
+            Sort={Sort}
+            setSort={setSort}
+          />
+          {/* 순위 타이틀 */}
+          <RTiltle />
+          {/* 순위 리스트 */}
+          <ScrollView
+            style={{marginTop: 20}}
+            showsVerticalScrollIndicator={false}>
+            <RList />
+          </ScrollView>
+        </View>
+      )}
     </View>
   );
 }
@@ -162,21 +155,5 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginLeft: 0,
     fontFamily: 'NotoSansKR-Regular',
-  },
-  input: {
-    width: '90%',
-    height: 56,
-    backgroundColor: 'white',
-    marginTop: 10,
-    borderColor: 'black',
-    borderBottomWidth: 1,
-    justifyContent: 'center',
-    lineHeight: 20,
-    textAlign: 'left',
-    marginLeft: '5%',
-    paddingLeft: 30,
-    fontFamily: 'NotoSansKR-Regular',
-    lineHeight: 30,
-    fontSize: 16,
   },
 });
