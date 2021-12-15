@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useLayoutEffect} from 'react';
 import {
   TouchableOpacity,
   Image,
@@ -40,6 +40,11 @@ export default function RankList() {
   const handleCorF = () => {
     setshowCorF(!showCorF);
   };
+
+  useLayoutEffect(() => {
+    alert('ww');
+  }, []);
+
   return (
     <View>
       <Search
@@ -47,59 +52,59 @@ export default function RankList() {
         setisSearch={setisSearch}
         handleSearch={handleSearch}
       />
-      {isSearch !== '' ? (
+      {/* {isSearch !== '' ? (
         <View showsVerticalScrollIndicator={false}>
           <SearchResult isSearch={isSearch} />
         </View>
-      ) : (
-        <View>
-          <View style={{flexDirection: 'row', marginTop: 30}}>
-            <TouchableOpacity
-              style={styles.greyBtn}
-              onPress={handleCatModlaVisable}>
-              <Text style={styles.greyBtnText}>카테고리</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.greyBtn2}
-              onPress={handleFolwModalVisable}>
-              <Text style={styles.greyBtnText}>팔로워수</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{flexDirection: 'row', marginLeft: 150}}
-              onPress={handleFNumModalVisable}>
-              <View style={{opacity: 0.5, flexDirection: 'row'}}>
-                <Image
-                  source={filter}
-                  style={{width: 12, height: 12, marginTop: 5}}
-                />
-                <Text style={styles.followerSoon}>팔로워순</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <CategoryModal
-            CatModalVis={CatModalVis}
-            handleCatModlaVisable={handleCatModlaVisable}
-            showCorF={showCorF}
-            handleCorF={handleCorF}
-            setCatModalVis={setCatModalVis}
-          />
-          <FollowerModal
-            handleFNumModalVisable={handleFNumModalVisable}
-            setFNumModalVis={setFNumModalVis}
-            FNumModalVis={FNumModalVis}
-            Sort={Sort}
-            setSort={setSort}
-          />
-          {/* 순위 타이틀 */}
-          <RTiltle />
-          {/* 순위 리스트 */}
-          <ScrollView
-            style={{marginTop: 20}}
-            showsVerticalScrollIndicator={false}>
-            <RList />
-          </ScrollView>
+      ) : ( */}
+      <View>
+        <View style={{flexDirection: 'row', marginTop: 30}}>
+          <TouchableOpacity
+            style={styles.greyBtn}
+            onPress={handleCatModlaVisable}>
+            <Text style={styles.greyBtnText}>카테고리</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.greyBtn2}
+            onPress={handleFolwModalVisable}>
+            <Text style={styles.greyBtnText}>팔로워수</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{flexDirection: 'row', marginLeft: 150}}
+            onPress={handleFNumModalVisable}>
+            <View style={{opacity: 0.5, flexDirection: 'row'}}>
+              <Image
+                source={filter}
+                style={{width: 12, height: 12, marginTop: 5}}
+              />
+              <Text style={styles.followerSoon}>팔로워순</Text>
+            </View>
+          </TouchableOpacity>
         </View>
-      )}
+        <CategoryModal
+          CatModalVis={CatModalVis}
+          handleCatModlaVisable={handleCatModlaVisable}
+          showCorF={showCorF}
+          handleCorF={handleCorF}
+          setCatModalVis={setCatModalVis}
+        />
+        <FollowerModal
+          handleFNumModalVisable={handleFNumModalVisable}
+          setFNumModalVis={setFNumModalVis}
+          FNumModalVis={FNumModalVis}
+          Sort={Sort}
+          setSort={setSort}
+        />
+        {/* 순위 타이틀 */}
+        <RTiltle />
+        {/* 순위 리스트 */}
+        <ScrollView
+          style={{marginTop: 20}}
+          showsVerticalScrollIndicator={false}>
+          <RList isSearch={isSearch} />
+        </ScrollView>
+      </View>
+      {/* )} */}
     </View>
   );
 }

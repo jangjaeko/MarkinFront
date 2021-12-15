@@ -1,7 +1,7 @@
 import React from 'react';
-import {StyleSheet, View, Text, Image} from 'react-native';
+import {StyleSheet, View, Text, Image, FlatList} from 'react-native';
 import issue1 from '../../../../images/issue1.png';
-export default function RList() {
+export default function RList(props) {
   const Categoly = [
     {
       key: 1,
@@ -76,29 +76,34 @@ export default function RList() {
   ];
   return (
     <View style={{marginBottom: '200%'}}>
-      {Categoly.map(item => (
-        <View style={styles.outView} key={item.key}>
-          <View
-            style={{
-              flexDirection: 'row',
-              marginLeft: '5%',
-            }}>
-            <View style={{width: 30}}>
-              <Text style={styles.rankText}>{item.key}</Text>
+      {Categoly.map(
+        item =>
+          item.id.toLowerCase().includes(props.isSearch) === true && (
+            <View style={styles.outView} key={item.key}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  marginLeft: '5%',
+                }}>
+                <View style={{width: 30}}>
+                  <Text style={styles.rankText}>{item.key}</Text>
+                </View>
+                <View style={styles.idSpace}>
+                  <Image source={item.pImage} style={styles.pImagest} />
+                  <Text style={{marginLeft: 8, fontSize: 15}}>{item.id} </Text>
+                </View>
+                <View style={{width: 70}}>
+                  <Text style={styles.realFollowerText}>
+                    {item.realFollower} k
+                  </Text>
+                </View>
+                <View style={{width: 75}}>
+                  <Text style={styles.followerText}>{item.Follower} k</Text>
+                </View>
+              </View>
             </View>
-            <View style={styles.idSpace}>
-              <Image source={item.pImage} style={styles.pImagest} />
-              <Text style={{marginLeft: 8, fontSize: 15}}>{item.id} </Text>
-            </View>
-            <View style={{width: 70}}>
-              <Text style={styles.realFollowerText}>{item.realFollower} k</Text>
-            </View>
-            <View style={{width: 75}}>
-              <Text style={styles.followerText}>{item.Follower} k</Text>
-            </View>
-          </View>
-        </View>
-      ))}
+          ),
+      )}
     </View>
   );
 }

@@ -89,8 +89,20 @@ export default function SearchResult(props) {
         keyExtractor={item => item.key}
         renderItem={({item}) =>
           item.id.toLowerCase().includes(props.isSearch) === true ? (
-            <View>
-              <Text>{item.id}</Text>
+            <View style={{flexDirection: 'row'}}>
+              <Image
+                source={item.pImage}
+                style={{width: 50, height: 50, borderRadius: 50 / 2}}
+              />
+              <View>
+                <Text>{item.id}</Text>
+                <View style={{flexDirection: 'row'}}>
+                  <Text>진짜 영향력</Text>
+                  <Text>{item.realFollower}</Text>
+                  <Text>팔로워 수</Text>
+                  <Text>{item.Follower}</Text>
+                </View>
+              </View>
             </View>
           ) : (
             <View></View>
